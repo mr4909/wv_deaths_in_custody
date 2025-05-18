@@ -22,7 +22,7 @@ Download Data
 </div>
 
 ::: {#wide-download-page}
-<a href="data/wvcbp_deaths.csv" class="button">Download CSV</a>
+<a href="data/wvcbp_deaths_in_custody.csv" class="button">Download CSV</a>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -38,7 +38,7 @@ source("R/setup.R")
 source("R/utils_helpers.R")
 
 # Load WV Center on Budget and Policy
-wvcbp_deaths <- readRDS("data/wvcbp_deaths.rds")
+wvcbp_deaths <- readRDS("data/wvcbp_deaths_in_custody.rds")
 
 full_names <- c(
   date_of_death = "Date of Death",
@@ -92,19 +92,14 @@ column_defs <- lapply(names(full_names), function(col) {
 reactable(
   wvcbp_deaths |> select(-c(source_table, facility)) |> 
     select(date_of_death, booking_date, race, gender, age_at_time_of_death, facility_name, type, everything()),
+  theme = reactable_theme(),
   columns = column_defs,
   searchable = FALSE,
   filterable = TRUE,
   pagination = TRUE,
   defaultColDef = colDef(
     na = "–",
-    width = 80, 
-    style = list(
-      fontFamily = "Source Sans 3",
-      fontSize = "14px",
-      padding = "6px 12px",
-      whiteSpace = "nowrap"
-    )
+    width = 80
   ),
   bordered = FALSE,
   highlight = TRUE,

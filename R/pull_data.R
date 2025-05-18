@@ -17,7 +17,7 @@ excel_path <- "data/DCR-Deaths-in-Custody-Jan-2020-to-March-2025.xlsx"
 sheet_names <- paste0("Table ", 1:6)
 
 # Read and combine the sheets, adding a column to indicate the source table
-wvcbp_deaths <- lapply(sheet_names, function(sheet) {
+wvcbp_deaths_in_custody <- lapply(sheet_names, function(sheet) {
   read_excel(excel_path, sheet = sheet) |>
     clean_names() |>
     mutate(
@@ -30,8 +30,8 @@ wvcbp_deaths <- lapply(sheet_names, function(sheet) {
 
 facility_lookup <- read_csv("data/facility_lookup.csv")
 
-# ---- Merge facility info into wvcbp_deaths ----
-wvcbp_deaths <- wvcbp_deaths |>
+# ---- Merge facility info into wvcbp_deaths_in_custody ----
+wvcbp_deaths_in_custody <- wvcbp_deaths_in_custody |>
   left_join(facility_lookup, by = "facility") |> 
   filter(!is.na(date_of_death)) |> 
   mutate(across(c(race, gender, facility, manner_of_death, cause_of_death, 
@@ -44,8 +44,8 @@ wv_latest_state_counts <- get_wv_subset("latest_state_counts")
 wv_latest_state_jurisdiction_counts <- get_wv_subset("latest_state_jurisdiction_counts")
 
 # ---- Save as .rds files in the data/ folder ----
-saveRDS(wvcbp_deaths, file = "data/wvcbp_deaths.rds")
-write.csv(wvcbp_deaths, "data/wvcbp_deaths.csv", row.names = FALSE, na = "")
+saveRDS(wvcbp_deaths_in_custody, file = "data/wvcbp_deaths_in_custody.rds")
+write.csv(wvcbp_deaths_in_custody, "data/wvcbp_deaths_in_custody.csv", row.names = FALSE, na = "")
 saveRDS(wv_historical_state_counts, file = "data/wv_historical_state_counts.rds")
 saveRDS(wv_latest_facility_counts, file = "data/wv_latest_facility_counts.rds")
 saveRDS(wv_latest_state_counts, file = "data/wv_latest_state_counts.rds")

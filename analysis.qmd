@@ -4,35 +4,31 @@ format:
   html:
     css: styles.css
     embed-resources: true
-    code-fold: true
+    code-fold: false
     page-layout: full
     fig_caption: true
     toc: false
 ---
 
-<div id="page-banner">
-  <h1 class="page-title">Analysis Walkthrough</h1>
-</div>
-<div class="narrow-page">
+::: {#page-banner}
+<h1 class="page-title">
 
-```{r load-wv-data, include=FALSE}
-source("R/setup.R")
-source("R/utils_helpers.R")
+Analysis Walkthrough
 
-# Load WV Center on Budget and Policy
-wvcbp_deaths <- readRDS("data/wvcbp_deaths.rds")
-```
+</h1>
+:::
 
+:::: narrow-page
 ## About the Data
 
 This dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by policy analyst Sara Whitaker.
 
 Each row represents a death, with key fields including:
 
-- `date_of_death` and `booking_date`
-- `age`, `race`, `gender`
-- `facility` and `offender_status` (e.g., pretrial vs. sentenced)
-- `manner_of_death` and `cause_of_death`
+-   `date_of_death` and `booking_date`
+-   `age`, `race`, `gender`
+-   `facility` and `offender_status` (e.g., pretrial vs. sentenced)
+-   `manner_of_death` and `cause_of_death`
 
 DCR’s annual reports do not publish this level of detail. Jail deaths are excluded, and no information is provided by facility, demographics, or cause. This dataset allows for deeper analysis of where, when, and how people are dying in custody.
 
@@ -40,15 +36,117 @@ DCR’s annual reports do not publish this level of detail. Jail deaths are excl
 
 In this section, we’ll begin exploring:
 
-- How many deaths occurred each year?
-- Which facilities have the highest number of deaths? 
-- How do deaths vary by custody status (pretrial vs. sentenced)?
-- Are certain groups disproportionately affected?
-- Are facilities with high mortality rates experiencing overcrowding?
+-   How many deaths occurred each year?
+-   Which facilities have the highest number of deaths?
+-   How do deaths vary by custody status (pretrial vs. sentenced)?
+-   Are certain groups disproportionately affected?
+-   Are facilities with high mortality rates experiencing overcrowding?
 
 We’ll also examine patterns in cause of death and compare counts to what DCR reports in its official publications.
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  include = TRUE
+)
 
+source("R/setup.R")
+source("R/utils_helpers.R")
 
+# Load WV Center on Budget and Policy data
+wvcbp_deaths <- readRDS("data/wvcbp_deaths_in_custody.rds")
 
-</div>
+df <- prepare_deaths_data(wvcbp_deaths)
+```
+
+## Annual Trends
+
+```{r}
+plot_deaths_by_year(df)
+```
+
+## Characteristics
+::: {.panel-tabset .nav-pills}
+
+### Race
+
+```{r}
+plot_deaths_by_var(df, "race") |>
+  hc_chart(height = 350)
+```
+
+### Gender
+
+```{r}
+plot_deaths_by_var(df, "gender") |>
+  hc_chart(height = 350)
+```
+
+### Age
+
+```{r}
+plot_deaths_by_var(df, "age") |>
+  hc_chart(height = 350)
+```
+
+## Offender Status
+
+```{r}
+plot_deaths_by_var(df, "offender_status") |>
+  hc_chart(height = 350)
+```
+:::
+
+## Net Change in Deaths: 2020 vs 2024
+
+```{r}
+calculate_net_change <- function(df, start_year = 2020, end_year = 2024) {
+  df |>
+    filter(year %in% c(start_year, end_year)) |>
+    count(facility_name, year) |>
+    pivot_wider(names_from = year, values_from = n, values_fill = 0) |>
+    mutate(net_change = !!sym(as.character(end_year)) - !!sym(as.character(start_year))) |>
+    arrange(desc(net_change))
+}
+
+net_change_df <- calculate_net_change(df) |> 
+  arrange(desc(net_change))
+reactable(
+  net_change_df,
+  theme = reactable_theme(),
+  filterable = TRUE,
+  pagination = TRUE,
+  defaultColDef = colDef(na = "–")
+)
+```
+
+## Facilities With the Most Deaths
+
+```{r}
+top_facilities <- df |>
+  group_by(type, facility_name) |>
+  summarise(total_deaths = n(), .groups = "drop") |>
+  arrange(desc(total_deaths))
+
+reactable(
+  top_facilities,
+  theme = reactable_theme(),
+  filterable = TRUE,
+  pagination = TRUE,
+  defaultColDef = colDef(na = "–")
+)
+```
+
+## Cause and Manner of Death
+
+```{r}
+plot_deaths_by_var(df, "cause_of_death")
+```
+
+```{r}
+plot_deaths_by_var(df, "manner_of_death")
+```
+
+::::

@@ -9,7 +9,7 @@
 }
 
 .button {
-  background-color: #d7790f;
+  background-color: #3F8BCA;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -27,6 +27,25 @@
   text-decoration: none;
 }
 
+/* Style the inactive (default) tabs */
+.nav-pills .nav-link {
+  color: #3F8BCA;                /* orange text */
+  background-color: white;       /* white background */
+  border: 1px solid #3F8BCA;
+  border-radius: 4px;
+  margin-right: 5px;
+  padding: 6px 12px;
+  font-weight: 600;
+}
+
+/* Style the active tab */
+.nav-pills .nav-link.active {
+  color: white !important;       /* white text */
+  background-color: #3F8BCA !important; /* orange background */
+  border-color: #3F8BCA;
+}
+
+
 /* ---------- BASE RESET ---------- */
 html, body, #landing-page {
   height: 100%;
@@ -40,7 +59,7 @@ html, body, #landing-page {
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
 
 code {
-  color: #d7790f !important; 
+  color: #3F8BCA !important; 
   background-color: transparent;
   font-weight: 600;
 }
@@ -73,6 +92,7 @@ h1 {
   font-weight: 600;
   font-size: 2.5rem;
   text-align: center;
+  color: #3F8BCA;
 }
 
 h2 {
@@ -80,19 +100,9 @@ h2 {
   text-align: center;
 }
 
-/* Custom Font Colors */
-.ucla-text {
-  font-family: 'ChampionHTF-Featherweight', sans-serif;
-  color: #d7790f; /* UCLA orange */
-}
-
-.bbdp-title {
-  color: #283224; /* Dark green for contrast */
-}
-
 /* ---------- LANDING PAGE ---------- */
 #landing-page {
-  background-color: #d7790f; /* Fallback background */
+  background-color: #3F8BCA; /* Fallback background */
   background-image: url("img/banner.svg");
   background-size: cover;
   background-position: center;
@@ -113,7 +123,7 @@ h2 {
 }
 
 #landing-page a {
-  color: #d7790f; /* Matches background for visual consistency */
+  color: #3F8BCA; /* Matches background for visual consistency */
 }
 
 /* Landing page title and subtitle */
@@ -122,7 +132,7 @@ h2 {
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: center;
-  color: #d7790f; /* Note: same as background – consider increasing contrast if layered */
+  color: #3F8BCA; /* Note: same as background – consider increasing contrast if layered */
 }
 
 #landing-page .page-subtitle {
@@ -137,7 +147,7 @@ h2 {
 /* Call-to-action button */
 #landing-page .banner-button {
   background-color: white;
-  color: #d7790f;
+  color: #3F8BCA;
   padding: 10px 20px;
   border: none;
   text-decoration: none;
@@ -155,7 +165,7 @@ h2 {
 
 #page-banner {
   background-image: url("img/banner.svg");
-  background-color: #d7790f
+  background-color: #3F8BCA
   color: #fff;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -174,7 +184,7 @@ main.content {
 /* Style for navigation menu */
 .navbar,
 .navbar-dark {
-  background-color: #d7790f !important;
+  background-color: #3F8BCA !important;
   border-bottom: 1px solid white;
 }
 
@@ -201,7 +211,7 @@ body a,
 body a:visited {
   color: #283224;
   text-decoration: underline;
-  text-decoration-color: #d7790f;
+  text-decoration-color: #3F8BCA;
   text-underline-offset: 2px;
 }
 
@@ -209,7 +219,7 @@ body a:hover,
 body a:focus {
   color: #283224;
   text-decoration: underline;
-  text-decoration-color: #d7790f;
+  text-decoration-color: #3F8BCA;
 }
 
 /* ---------- CALLOUTS ---------- */

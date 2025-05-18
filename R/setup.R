@@ -1,9 +1,8 @@
 # ============================================================
-# Title:    Global Setup – Libraries and Branding
+# Title:    Global Setup – Libraries
 # Author:   Mari Roberts
 # Created:  2025-05-17
-# Purpose:  Set global options, load required packages, and define
-#           UCLA Behind Bars branding colors and font references.
+# Purpose:  Set global options, load required packages
 # ============================================================
 
 # ------------------------
@@ -37,35 +36,12 @@ required_packages <- c(
   "scales",
   "gt",
   "readxl",
-  "reactable"
+  "reactable",
+  "highcharter"
 )
 
 # Load packages quietly
 invisible(lapply(required_packages, library, character.only = TRUE))
 
-# ------------------------
-# UCLA Behind Bars Branding – Colors and Fonts
-# ------------------------
-
-ucla_colors <- list(
-  white        = "#ffffff",
-  black        = "#000000",
-  gray         = "#e1e0e5",  # mischka-gray
-  blue         = "#5d5e79",  # comet-blue
-  forest       = "#283224",  # black-forest
-  ivory        = "#fbfbf7",
-  mist         = "#c8c8b9",  # moon-mist
-  orange       = "#d7790f",  # ochre
-  green        = "#82caa4",  # summer-green
-  darkblue     = "#4c6788",  # wedgewood
-  olive        = "#84806f",  # olive-haze
-  saratoga     = "#555526",
-  font_color   = "#000000",  
-  font_inverse = "#ffffff"   
-)
-
-# Font stack will be applied via custom CSS
-# Titles: Plantin
-# Body: Neue Haas Grotesk Display
-# UCLA label: Champion Gothic Featherweight
-# Behind Bars Data Project label: Champion Gothic Middleweight
+# "#d7790f"
+# colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
