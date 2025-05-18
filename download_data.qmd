@@ -18,7 +18,7 @@ Download Data
 :::
 <div class="narrow-page">
 <br>
-<p>This dataset is based on records obtained through FOIA requests to the <strong>West Virginia Division of Corrections and Rehabilitation</strong> and compiled by the <strong>West Virginia Center on Budget and Policy</strong> (WVCBP).It was published in March 2025 as part of their reporting on deaths in state custody.</p>
+<p>This dataset is based on records obtained through FOIA requests to the <strong>West Virginia Division of Corrections and Rehabilitation</strong> and compiled by the <strong>West Virginia Center on Budget and Policy</strong> (WVCBP). It was published in March 2025 as part of their reporting on deaths in state custody.</p>
 </div>
 
 ::: {#wide-download-page}

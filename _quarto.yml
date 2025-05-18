@@ -1,5 +1,8 @@
 project:
   type: website
+  resources:
+    - data/wvcbp_deaths.csv
+    - fonts
 
 website:
   title: "WV Deaths in Custody"
@@ -30,6 +33,3 @@ format:
 
 execute:
   freeze: auto
-
-resources:
-  - fonts

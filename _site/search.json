@@ -1,59 +1,10 @@
 [
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "download_data.html",
+    "href": "download_data.html",
+    "title": "Download Data",
     "section": "",
-    "text": "Contact\n\n\n\nIf you’d like to connect or learn more about my work, feel free to reach out.\n\nEmail: marialexandriraroberts@gmail.com\nGitHub: https://github.com/mr4909\nLinkedIn: https://www.linkedin.com/in/marialexandriaroberts/"
-  },
-  {
-    "objectID": "about.html#whats-really-happening-inside-west-virginias-jails-and-prisons",
-    "href": "about.html#whats-really-happening-inside-west-virginias-jails-and-prisons",
-    "title": "About",
-    "section": "What’s really happening inside West Virginia’s jails and prisons?",
-    "text": "What’s really happening inside West Virginia’s jails and prisons?\nEach year, people die in the custody of West Virginia’s Division of Corrections and Rehabilitation (DCR)—but the public rarely learns who they were, where they died, or what happened to them.\nThis site exists to change that.\nIt presents the first facility-level dataset of reported deaths in DCR custody, covering both prisons and regional jails. The data comes from Freedom of Information Act (FOIA) requests and includes details that are not available in DCR’s public reports:\n\nDate of death\n\nFacility name\n\nAge, race, and gender\n\nManner and cause of death\n\nWhether the person was awaiting trial or already sentenced"
-  },
-  {
-    "objectID": "about.html#what-dcr-reportsand-what-it-doesnt",
-    "href": "about.html#what-dcr-reportsand-what-it-doesnt",
-    "title": "About",
-    "section": "What DCR reports—and what it doesn’t",
-    "text": "What DCR reports—and what it doesn’t\nIn its annual reports, DCR lists only the number of deaths in state prisons, broken down by month and year. But:\n\nDeaths in jails are excluded entirely\nThere is no breakdown by facility, demographics, or cause\nNo names, narratives, or circumstances are ever shared\n\nThis means the public cannot see patterns, identify red flags, or hold the system accountable."
-  },
-  {
-    "objectID": "about.html#what-this-dataset-adds",
-    "href": "about.html#what-this-dataset-adds",
-    "title": "About",
-    "section": "What this dataset adds",
-    "text": "What this dataset adds\nIn 2024, policy analyst Sara Whitaker of the WV Center on Budget and Policy submitted a FOIA request asking DCR to release:\n\nAll deaths in custody since 2020\n\nRecords covering prisons, jails, hospital transfers, and administrative releases\n\nCase-level details on each person who died\n\nThe dataset includes 289 deaths in DCR custody from January 2020 to March 2025, based on six tables released via FOIA to policy analyst Sarah Whitaker.\nSara Whitaker found that:\n\nMany jail deaths were not disclosed in prior DCR reports\n\nSome deaths were excluded from official tallies if they happened after a hospital transfer or administrative release\n\nDCR often labeled deaths as “natural” or “overdose” without providing details, even in cases involving violence or neglect\n\nFamilies were not notified publicly, and several deaths only came to light through litigation"
-  },
-  {
-    "objectID": "about.html#why-this-matters",
-    "href": "about.html#why-this-matters",
-    "title": "About",
-    "section": "Why this matters",
-    "text": "Why this matters\nWest Virginia has had one of the highest jail death rates in the country over the past decade. But with no facility-level reporting, there is:\n\nNo transparency around which jails or prisons are most at risk\n\nNo public system to track systemic failures like overcrowding or neglect\n\nNo routine disclosure when people die in government custody\n\nWithout outside scrutiny, the system operates in silence—even as lawsuits and investigative reporting reveal troubling patterns."
-  },
-  {
-    "objectID": "about.html#what-this-project-aims-to-do",
-    "href": "about.html#what-this-project-aims-to-do",
-    "title": "About",
-    "section": "What this project aims to do",
-    "text": "What this project aims to do\nThis project uses the FOIA-released dataset to:\n\nDocument deaths in West Virginia’s jails and prisons from 2020–2025\n\nProvide facility-level transparency where none previously existed\n\nSupport journalists, watchdogs, and advocates working toward oversight\n\nCompare FOIA records with WV DCR annual reports and the UCLA Behind Bars national database to surface discrepancies\n\nRaise new questions about facility conditions, medical care, and system design"
-  },
-  {
-    "objectID": "about.html#data-sources",
-    "href": "about.html#data-sources",
-    "title": "About",
-    "section": "Data sources",
-    "text": "Data sources\n\nFOIA response to Sara Whitaker, WV Center on Budget and Policy (Sept 2024)\n\nWV DCR Annual Reports (prison-only counts, no case-level data)\n\nUCLA Behind Bars Data Project"
-  },
-  {
-    "objectID": "about.html#related-reports",
-    "href": "about.html#related-reports",
-    "title": "About",
-    "section": "Related reports",
-    "text": "Related reports\nThis work builds on reporting and analysis by Sara Whitaker, whose efforts helped bring these deaths to public light:\n\nAre Fewer People Dying in West Virginia Jails? Or is the State Simply Not Counting? (2025)\n\nNo More Hidden Rules: WV DCR Policies and Procedures (2023)\n\nJustice System Oversight Is Missing in West Virginia (2023)"
+    "text": "Download Data\n\n\n\n\n\nThis dataset is based on records obtained through FOIA requests to the West Virginia Division of Corrections and Rehabilitation and compiled by the West Virginia Center on Budget and Policy (WVCBP). It was published in March 2025 as part of their reporting on deaths in state custody.\n\n\n\nDownload CSV\n\n\n\n\n\n\n\n Data Notes:\n\nYou can view the original source file here:\nDCR Deaths in Custody: Jan 2020–March 2025 (PDF).\n\n\nThe dataset was released publicly in this article:\nAre fewer people dying in West Virginia jails, or is the state simply not counting?\n\n\nHere are some FOIA request documents cited or referenced in that reporting:\n\n\n\n September 2024 FOIA response – death log from August 2024 \n\n\n January 2024 FOIA response – deaths in custody (2009–present) \n\n\n February 2025 FOIA response – Inspector General reports"
   },
   {
     "objectID": "analysis.html#about-the-data",
@@ -68,13 +19,6 @@
     "title": "Analysis Walkthrough",
     "section": "Exploratory Data Analysis",
     "text": "Exploratory Data Analysis\nIn this section, we’ll begin exploring:\n\nHow many deaths occurred each year?\nWhich facilities have the highest number of deaths?\nHow do deaths vary by custody status (pretrial vs. sentenced)?\nAre certain groups disproportionately affected?\nAre facilities with high mortality rates experiencing overcrowding?\n\nWe’ll also examine patterns in cause of death and compare counts to what DCR reports in its official publications."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "\nUncovering Deaths in West Virginia Jails and Prisons\n",
-    "section": "",
-    "text": "Uncovering Deaths in West Virginia Jails and Prisons\n\n\nInsights into where, when, and why people are dying in custody.\n\nView Key Findings"
   },
   {
     "objectID": "about.html#purpose",
@@ -119,24 +63,17 @@
     "text": "What’s Next\nFuture updates will include:\n\nJail capacity data to examine overcrowding as a potential risk factor\n\nCross-referencing with UCLA’s Behind Bars dataset for comparison\n\nAdding incident narratives and lawsuits when available\n\nEstimating underreporting or inconsistent categorization of deaths"
   },
   {
-    "objectID": "download_data.html",
-    "href": "download_data.html",
-    "title": "Download Data",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "Download Data\n\n\n\n\n\nThis dataset is based on records obtained through FOIA requests to the West Virginia Division of Corrections and Rehabilitation and compiled by the West Virginia Center on Budget and Policy (WVCBP).It was published in March 2025 as part of their reporting on deaths in state custody.\n\n\n\nDownload CSV\n\n\n\n\n\n\n\n Data Notes:\n\nYou can view the original source file here:\nDCR Deaths in Custody: Jan 2020–March 2025 (PDF).\n\n\nThe dataset was released publicly in this article:\nAre fewer people dying in West Virginia jails, or is the state simply not counting?\n\n\nHere are some FOIA request documents cited or referenced in that reporting:\n\n\n\n September 2024 FOIA response – death log from August 2024 \n\n\n January 2024 FOIA response – deaths in custody (2009–present) \n\n\n February 2025 FOIA response – Inspector General reports"
+    "text": "Contact\n\n\n\nIf you’d like to connect or learn more about my work, feel free to reach out.\n\nEmail: marialexandriraroberts@gmail.com\nGitHub: https://github.com/mr4909\nLinkedIn: https://www.linkedin.com/in/marialexandriaroberts/"
   },
   {
-    "objectID": "download_data.html#data",
-    "href": "download_data.html#data",
-    "title": "Download Data",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "download_data.html#foia-requested-data",
-    "href": "download_data.html#foia-requested-data",
-    "title": "Download Data",
-    "section": "FOIA-Requested Data",
-    "text": "FOIA-Requested Data\nDownload CSV"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nUncovering Deaths in West Virginia Jails and Prisons\n",
+    "section": "",
+    "text": "Uncovering Deaths in West Virginia Jails and Prisons\n\n\nInsights into where, when, and why people are dying in custody.\n\nView Key Findings"
   }
 ]
