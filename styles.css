@@ -1,0 +1,229 @@
+#title-block-header {
+  display: none;
+}
+
+
+/* ---------- BASE RESET ---------- */
+html, body, #landing-page {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- FONT IMPORTS ---------- */
+@font-face {
+  font-family: 'ChampionHTF-Featherweight';
+  src: url('fonts/Champion HTF-Featherweight Regular.otf') format('opentype');
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+
+body {
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+}
+
+.quarto-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: '__Plantin_a26a95', '__Plantin_Fallback_a26a95', serif;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  border: none; /* Remove the underline */
+}
+
+/* Custom Font Colors */
+.ucla-text {
+  font-family: 'ChampionHTF-Featherweight', sans-serif;
+  color: #d7790f; /* UCLA orange */
+}
+
+.bbdp-title {
+  color: #283224; /* Dark green for contrast */
+}
+
+/* ---------- LANDING PAGE ---------- */
+#landing-page {
+  background-color: #d7790f; /* Fallback background */
+  background-image: url("img/banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #e1e0e5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#landing-page a {
+  color: #d7790f; /* Matches background for visual consistency */
+}
+
+/* Landing page title and subtitle */
+#landing-page .page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #d7790f; /* Note: same as background – consider increasing contrast if layered */
+}
+
+#landing-page .page-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  color: #283224;
+}
+
+/* Call-to-action button */
+#landing-page .banner-button {
+  background-color: white;
+  color: #d7790f;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#landing-page .banner-button:active,
+#landing-page .banner-button:focus {
+  color: black;
+}
+
+#page-banner {
+  background-color: #d7790f;
+  color: #fff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 1rem 1rem 2rem 1rem; /* top, right, bottom, left */
+  text-align: center;
+  margin-top: 0;
+}
+
+main.content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+/* ---------- NAVIGATION BAR ---------- */
+.navbar, .navbar-dark {
+  background-color: #fff !important;
+  border-bottom: 1px solid #fff; /* Issue: #white is invalid — replaced with #fff */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #111 !important;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-item.active .nav-link {
+  color: gray !important;
+}
+
+.navbar-full-logo {
+  height: 35px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar .navbar-brand span {
+  display: block;
+  line-height: 0.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- GLOBAL LINKS (NON-NAVBAR) ---------- */
+body a,
+body a:visited {
+  color: #283224;
+  text-decoration: underline;
+  text-decoration-color: #d7790f;
+  text-underline-offset: 2px;
+}
+
+body a:hover,
+body a:focus {
+  color: #283224;
+  text-decoration: underline;
+  text-decoration-color: #d7790f;
+}
+
+/* ---------- CALLOUTS ---------- */
+.callout-orange {
+  background-color: #f6e9d8;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  color: #111;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- CONTENT WRAPPERS ---------- */
+.section {
+  padding: 4rem 2rem;
+}
+
+/* ---------- STATS BLOCK ---------- */
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.stat .number {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.stat .label {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- MISCELLANEOUS ---------- */
+/* Hero section introduction */
+.hero-intro {
+  max-width: 750px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}

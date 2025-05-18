@@ -1,0 +1,52 @@
+**/data/
+
+# ───────────────────────────────
+# RStudio local/session files
+# ───────────────────────────────
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+.Renviron
+
+# ───────────────────────────────
+# Build outputs and temporary files
+# ───────────────────────────────
+*.Rcheck/
+*.tar.gz
+*.utf8.md
+*.knit.md
+*-Ex.R
+/cache/
+*_cache/
+po/*~
+
+# ───────────────────────────────
+# R package tools
+# ───────────────────────────────
+docs/             # pkgdown site (if used)
+vignettes/*.html
+vignettes/*.pdf
+.httr-oauth
+
+# ───────────────────────────────
+# renv reproducibility setup
+# ───────────────────────────────
+renv/library/
+renv/staging/
+
+# ───────────────────────────────
+# Quarto site build artifacts
+# ───────────────────────────────
+.quarto/
+.quarto-preview/
+
+# ───────────────────────────────
+# RStudio Connect deployment
+# ───────────────────────────────
+rsconnect/
+
+/.quarto/
+data/

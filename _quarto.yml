@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "UCLA Law Behind Bars Data Project"  # for browser tab
+  favicon: img/favicon.png
+  navbar:
+    title: |
+      <img src="img/logo.png" alt="UCLA Law Behind Bars Data Project" class="navbar-full-logo">
+    left:
+      - text: "Home"
+        href: index.html
+      - text: "About"
+        href: about.html
+      - text: "Key Findings"
+        href: key_findings.html
+      - text: "Analysis"
+        href: analysis.html
+      - text: "Contact"
+        href: contact.html
+      - text: "Github"
+        href: https://github.com/mr4909/ucla_work_examples
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-location: left
+
+execute:
+  freeze: auto
+
+resources:
+  - fonts

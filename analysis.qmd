@@ -1,0 +1,52 @@
+---
+title: "Analysis Walkthrough"
+format:
+  html:
+    css: styles.css
+    embed-resources: true
+    code-fold: true
+    page-layout: full
+    fig_caption: true
+    toc: false
+---
+
+<div id="page-banner">
+  <h1 class="page-title">Analysis Walkthrough</h1>
+</div>
+<br>
+
+```{r load-wv-data, include=FALSE}
+source("R/setup.R")
+source("R/utils_helpers.R")
+
+# Load WV Center on Budget and Policy
+wvcbp_deaths <- readRDS("data/wvcbp_deaths.rds")
+```
+
+## About the Data
+
+This dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by policy analyst Sara Whitaker.
+
+Each row represents a death, with key fields including:
+
+- `date_of_death` and `booking_date`
+- `age`, `race`, `gender`
+- `facility` and `offender_status` (e.g., pretrial vs. sentenced)
+- `manner_of_death` and `cause_of_death`
+
+DCR’s annual reports do not publish this level of detail. Jail deaths are excluded, and no information is provided by facility, age, or cause. This dataset allows for deeper analysis of where, when, and how people are dying in custody.
+
+## Exploratory Data Analysis
+
+In this section, we’ll begin exploring:
+
+- How many deaths occurred each year?
+- Which facilities have the highest number of deaths?
+- How do deaths vary by custody status (pretrial vs. sentenced)?
+- Are certain age groups or races disproportionately affected?
+
+We’ll also examine patterns in cause of death and compare counts to what DCR reports in its official publications.
+
+
+
+

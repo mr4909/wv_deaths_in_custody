@@ -1,0 +1,23 @@
+---
+title: 'Contact'
+format:
+  html:
+    css: styles.css
+    embed-resources: TRUE
+    code-fold: true
+    page-layout: full
+    fig_caption: yes
+    toc: false
+---
+
+<div id="page-banner">
+  <h1 class="page-title">Contact</h1>
+</div>
+<br>
+
+If you'd like to connect or learn more about my work, feel free to reach out.
+
+- **Email:** [marialexandriraroberts@gmail.com](mailto:marialexandriraroberts@gmail.com)
+- **GitHub:** [https://github.com/mr4909](https://github.com/mr4909)
+- **LinkedIn:** [https://www.linkedin.com/in/marialexandriaroberts/](https://www.linkedin.com/in/marialexandriaroberts/)
+

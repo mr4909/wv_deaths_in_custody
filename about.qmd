@@ -1,0 +1,91 @@
+---
+title: "About"
+format:
+  html:
+    css: styles.css
+    embed-resources: true
+    code-fold: true
+    page-layout: full
+    fig_caption: true
+    toc: false
+---
+
+<div id="page-banner">
+  <h1 class="page-title">About</h1>
+</div>
+<br>
+
+## What’s really happening inside West Virginia’s jails and prisons?
+
+Each year, people die in the custody of West Virginia’s Division of Corrections and Rehabilitation (DCR)—but the public rarely learns who they were, where they died, or what happened to them.  
+
+This site exists to change that.
+
+It presents the first **facility-level dataset** of reported deaths in DCR custody, covering both prisons and regional jails. The data comes from **Freedom of Information Act (FOIA) requests** and includes details that are **not available** in DCR’s public reports:
+
+- Date of death  
+- Facility name  
+- Age, race, and gender  
+- Manner and cause of death  
+- Whether the person was awaiting trial or already sentenced  
+
+## What DCR reports—and what it doesn’t
+
+In its annual reports, DCR lists only the **number of deaths in state prisons**, broken down by month and year. But:
+
+- **Deaths in jails are excluded entirely**
+- There is **no breakdown** by facility, demographics, or cause
+- No names, narratives, or circumstances are ever shared  
+
+This means the public cannot see patterns, identify red flags, or hold the system accountable.
+
+## What this dataset adds
+
+In 2024, policy analyst **Sara Whitaker** of the [WV Center on Budget and Policy](https://wvpolicy.org/) submitted a FOIA request asking DCR to release:
+
+- All deaths in custody since 2020  
+- Records covering prisons, jails, hospital transfers, and administrative releases  
+- Case-level details on each person who died  
+
+The dataset includes **289 deaths in DCR custody from January 2020 to March 2025**, based on six tables released via FOIA to policy analyst Sarah Whitaker.
+
+Sara Whitaker found that:
+
+- **Many jail deaths were not disclosed** in prior DCR reports  
+- Some deaths were **excluded** from official tallies if they happened after a hospital transfer or administrative release  
+- DCR often labeled deaths as “natural” or “overdose” **without providing details**, even in cases involving violence or neglect  
+- Families were not notified publicly, and several deaths only came to light through litigation  
+
+## Why this matters
+
+West Virginia has had **one of the highest jail death rates in the country** over the past decade. But with no facility-level reporting, there is:
+
+- No transparency around which jails or prisons are most at risk  
+- No public system to track systemic failures like overcrowding or neglect  
+- No routine disclosure when people die in government custody  
+
+Without outside scrutiny, the system operates in silence—even as lawsuits and investigative reporting reveal troubling patterns.
+
+## What this project aims to do
+
+This project uses the FOIA-released dataset to:
+
+- Document deaths in West Virginia’s **jails and prisons** from 2020–2025  
+- Provide **facility-level transparency** where none previously existed  
+- Support journalists, watchdogs, and advocates working toward oversight  
+- Compare FOIA records with **WV DCR annual reports** and the **UCLA Behind Bars** national database to surface discrepancies  
+- Raise new questions about facility conditions, medical care, and system design  
+
+## Data sources
+
+- FOIA response to **Sara Whitaker**, WV Center on Budget and Policy (Sept 2024)  
+- **WV DCR Annual Reports** (prison-only counts, no case-level data)  
+- [**UCLA Behind Bars Data Project**](https://uclalawbehindbars.org)
+
+## Related reports
+
+This work builds on reporting and analysis by **Sara Whitaker**, whose efforts helped bring these deaths to public light:
+
+- [Are Fewer People Dying in West Virginia Jails? Or is the State Simply Not Counting?](https://wvpolicy.org/are-fewer-people-dying-in-west-virginia-jails-or-is-the-state-simply-not-counting/) (2025)  
+- [No More Hidden Rules: WV DCR Policies and Procedures](https://wvpolicy.org/no-more-hidden-rules/) (2023)  
+- [Justice System Oversight Is Missing in West Virginia](https://wvpolicy.org/justice-system-oversight-is-missing-in-west-virginia/) (2023)  
