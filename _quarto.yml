@@ -2,12 +2,10 @@ project:
   type: website
 
 website:
-  title: "UCLA Law Behind Bars Data Project"  # for browser tab
+  title: "WV Deaths in Custody"
   favicon: img/favicon.png
   navbar:
-    title: |
-      <img src="img/logo.png" alt="UCLA Law Behind Bars Data Project" class="navbar-full-logo">
-    left:
+    right:
       - text: "Home"
         href: index.html
       - text: "About"
@@ -19,7 +17,7 @@ website:
       - text: "Contact"
         href: contact.html
       - text: "Github"
-        href: https://github.com/mr4909/ucla_work_examples
+        href: https://github.com/mr4909/wv_deaths_in_custody
 
 format:
   html:

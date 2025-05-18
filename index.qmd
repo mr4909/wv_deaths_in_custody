@@ -11,8 +11,8 @@ format:
 ---
 
 <div id="landing-page">
-  <h1 class="page-title">Uncovering Deaths in Custody</h1>
-  <p class="page-subtitle">Insights into where, when, and why people are dying in West Virginia jails and prisons.</p>
+  <h1 class="page-title">Uncovering Deaths in West Virginia Jails and Prisons</h1>
+  <p class="page-subtitle">Insights into where, when, and why people are dying in custody.</p>
   <a href="https://ucla-exercise.netlify.app/key_findings" class="banner-button">View Key Findings</a>
 </div>
 
