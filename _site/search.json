@@ -60,14 +60,14 @@
     "href": "analysis.html#about-the-data",
     "title": "Analysis Walkthrough",
     "section": "About the Data",
-    "text": "About the Data\nThis dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by policy analyst Sara Whitaker.\nEach row represents a death, with key fields including:\n\ndate_of_death and booking_date\nage, race, gender\nfacility and offender_status (e.g., pretrial vs. sentenced)\nmanner_of_death and cause_of_death\n\nDCR’s annual reports do not publish this level of detail. Jail deaths are excluded, and no information is provided by facility, age, or cause. This dataset allows for deeper analysis of where, when, and how people are dying in custody."
+    "text": "About the Data\nThis dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by policy analyst Sara Whitaker.\nEach row represents a death, with key fields including:\n\ndate_of_death and booking_date\nage, race, gender\nfacility and offender_status (e.g., pretrial vs. sentenced)\nmanner_of_death and cause_of_death\n\nDCR’s annual reports do not publish this level of detail. Jail deaths are excluded, and no information is provided by facility, demographics, or cause. This dataset allows for deeper analysis of where, when, and how people are dying in custody."
   },
   {
     "objectID": "analysis.html#exploratory-data-analysis",
     "href": "analysis.html#exploratory-data-analysis",
     "title": "Analysis Walkthrough",
     "section": "Exploratory Data Analysis",
-    "text": "Exploratory Data Analysis\nIn this section, we’ll begin exploring:\n\nHow many deaths occurred each year?\nWhich facilities have the highest number of deaths?\nHow do deaths vary by custody status (pretrial vs. sentenced)?\nAre certain age groups or races disproportionately affected?\n\nWe’ll also examine patterns in cause of death and compare counts to what DCR reports in its official publications."
+    "text": "Exploratory Data Analysis\nIn this section, we’ll begin exploring:\n\nHow many deaths occurred each year?\nWhich facilities have the highest number of deaths?\nHow do deaths vary by custody status (pretrial vs. sentenced)?\nAre certain groups disproportionately affected?\nAre facilities with high mortality rates experiencing overcrowding?\n\nWe’ll also examine patterns in cause of death and compare counts to what DCR reports in its official publications."
   },
   {
     "objectID": "index.html",
@@ -75,5 +75,68 @@
     "title": "\nUncovering Deaths in West Virginia Jails and Prisons\n",
     "section": "",
     "text": "Uncovering Deaths in West Virginia Jails and Prisons\n\n\nInsights into where, when, and why people are dying in custody.\n\nView Key Findings"
+  },
+  {
+    "objectID": "about.html#purpose",
+    "href": "about.html#purpose",
+    "title": "About",
+    "section": "Purpose",
+    "text": "Purpose\nWhen someone dies in a jail or prison, their loved ones are often left without answers. The public, too, is left in the dark—unable to understand where and why these deaths happen, or what conditions may have contributed to them. In West Virginia, meaningful transparency around deaths in custody is rare. The state does not publish names, demographic details, causes of death, or the facilities where people died. Many deaths—particularly in jails—are not reflected in public reporting at all.\nThis project exists to help fill that gap.\nIt provides the first publicly accessible, facility-level dataset of deaths in West Virginia’s Division of Corrections and Rehabilitation (DCR) custody. It seeks to document when and where people have died, and to offer context around those deaths by linking them to facility characteristics and other public data."
+  },
+  {
+    "objectID": "about.html#why-it-matters",
+    "href": "about.html#why-it-matters",
+    "title": "About",
+    "section": "Why It Matters",
+    "text": "Why It Matters\nDCR oversees 11 regional jails and 7 state prisons. They provide monthly death counts from prisons in their annual reports—but:\n\nIt does not report deaths in regional jails\nIt does not include names, causes of death, or facility-level data\nIt excludes deaths that occur after hospital transfers or administrative releases\nThere is no centralized public database for jail and prison mortality in the state\n\nThis makes public oversight nearly impossible."
+  },
+  {
+    "objectID": "about.html#data-source",
+    "href": "about.html#data-source",
+    "title": "About",
+    "section": "Data Source",
+    "text": "Data Source\nIn 2024, Sara Whitaker, a policy analyst at the West Virginia Center on Budget and Policy (WVCBP), submitted a public records request (FOIA) asking DCR to release case-level information on all deaths in custody since 2020.\n\nThe FOIA response included six tables embedded in a PDF, listing deaths by date, facility, demographic information, and manner of death.\n\nI manually extracted and cleaned those tables into a usable dataset.\nYou can view her original analysis here:\nAre Fewer People Dying in West Virginia Jails—or Is the State Simply Not Counting?"
+  },
+  {
+    "objectID": "about.html#this-project-builds-on-that-work",
+    "href": "about.html#this-project-builds-on-that-work",
+    "title": "About",
+    "section": "This Project Builds on That Work",
+    "text": "This Project Builds on That Work\nWhile Whitaker’s work highlighted the transparency failures around deaths in custody, this site focuses on independent data analysis and visualization of the same source.\nThis includes:\n\nCleaning and merging all six FOIA tables\n\nStandardizing facility names and linking them to facility type (jail vs. prison)\n\nCreating reproducible code and documentation\n\nPublishing a structured, interactive website for public use"
+  },
+  {
+    "objectID": "about.html#whats-included",
+    "href": "about.html#whats-included",
+    "title": "About",
+    "section": "What’s Included",
+    "text": "What’s Included\nThis site features:\n\nA downloadable, cleaned dataset of 289 deaths from 2020 to 2025\n\nInteractive charts exploring facility-level patterns\n\nFilters by age, gender, race, cause of death, and custody status\n\nA research log to document data issues, assumptions, and updates"
+  },
+  {
+    "objectID": "about.html#whats-next",
+    "href": "about.html#whats-next",
+    "title": "About",
+    "section": "What’s Next",
+    "text": "What’s Next\nFuture updates will include:\n\nJail capacity data to examine overcrowding as a potential risk factor\n\nCross-referencing with UCLA’s Behind Bars dataset for comparison\n\nAdding incident narratives and lawsuits when available\n\nEstimating underreporting or inconsistent categorization of deaths"
+  },
+  {
+    "objectID": "download_data.html",
+    "href": "download_data.html",
+    "title": "Download Data",
+    "section": "",
+    "text": "Download Data\n\n\n\n\n\nThis dataset is based on records obtained through FOIA requests to the West Virginia Division of Corrections and Rehabilitation and compiled by the West Virginia Center on Budget and Policy (WVCBP).It was published in March 2025 as part of their reporting on deaths in state custody.\n\n\n\nDownload CSV\n\n\n\n\n\n\n\n Data Notes:\n\nYou can view the original source file here:\nDCR Deaths in Custody: Jan 2020–March 2025 (PDF).\n\n\nThe dataset was released publicly in this article:\nAre fewer people dying in West Virginia jails, or is the state simply not counting?\n\n\nHere are some FOIA request documents cited or referenced in that reporting:\n\n\n\n September 2024 FOIA response – death log from August 2024 \n\n\n January 2024 FOIA response – deaths in custody (2009–present) \n\n\n February 2025 FOIA response – Inspector General reports"
+  },
+  {
+    "objectID": "download_data.html#data",
+    "href": "download_data.html#data",
+    "title": "Download Data",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "download_data.html#foia-requested-data",
+    "href": "download_data.html#foia-requested-data",
+    "title": "Download Data",
+    "section": "FOIA-Requested Data",
+    "text": "FOIA-Requested Data\nDownload CSV"
   }
 ]

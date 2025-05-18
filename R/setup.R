@@ -36,7 +36,8 @@ required_packages <- c(
   "htmlwidgets",
   "scales",
   "gt",
-  "readxl"
+  "readxl",
+  "reactable"
 )
 
 # Load packages quietly

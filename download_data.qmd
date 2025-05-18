@@ -1,0 +1,143 @@
+---
+title: "Download Data"
+format:
+  html:
+    body-class: wide-page
+    css: styles.css
+    embed-resources: true
+    code-fold: false
+    page-layout: full
+    fig_caption: true
+    toc: false
+---
+
+::: {#page-banner}
+<h1 class="page-title">
+Download Data
+</h1>
+:::
+<div class="narrow-page">
+<br>
+<p>This dataset is based on records obtained through FOIA requests to the <strong>West Virginia Division of Corrections and Rehabilitation</strong> and compiled by the <strong>West Virginia Center on Budget and Policy</strong> (WVCBP).It was published in March 2025 as part of their reporting on deaths in state custody.</p>
+</div>
+
+::: {#wide-download-page}
+<a href="data/wvcbp_deaths.csv" class="button">Download CSV</a>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  include = TRUE
+)
+```
+
+```{r}
+source("R/setup.R")
+source("R/utils_helpers.R")
+
+# Load WV Center on Budget and Policy
+wvcbp_deaths <- readRDS("data/wvcbp_deaths.rds")
+
+full_names <- c(
+  date_of_death = "Date of Death",
+  booking_date = "Booking Date",
+  race = "Race",
+  gender = "Gender",
+  age_at_time_of_death = "Age",
+  facility = "Facility Code",
+  manner_of_death = "Manner of Death",
+  cause_of_death = "Cause of Death",
+  offender_status = "Offender Status",
+  county = "County",
+  source_table = "Source Table",
+  dob = "DOB",
+  case_number = "Case #",
+  facility_name = "Facility",
+  type = "Facility Type"
+)
+
+# Custom widths for specific columns
+custom_col_defs <- list(
+  date_of_death = colDef(name = "Date of Death", width = 100),
+  booking_date = colDef(name = "Booking Date", width = 100),
+  age_at_time_of_death = colDef(name = "Age", width = 60),
+  facility_name = colDef(name = "Facility", width = 220),
+  cause_of_death = colDef(name = "Cause of Death", width = 180),
+  
+  offender_status = colDef(name = "Offender Status", width = 190),
+  county = colDef(name = "County", width = 180),
+  dob = colDef(name = "DOB", width = 100),
+  case_number = colDef(name = "Case #", width = 100)
+)
+
+# Build full column definitions: use custom if available, else default
+column_defs <- lapply(names(full_names), function(col) {
+  # Start with default colDef
+  base <- colDef()
+  
+  # If there's a custom colDef, merge its settings into base
+  if (col %in% names(custom_col_defs)) {
+    base <- modifyList(base, custom_col_defs[[col]])
+  }
+
+  # Always apply the human-readable name
+  base$name <- full_names[[col]]
+  base
+}) |> setNames(names(full_names))
+
+
+# Final reactable call
+reactable(
+  wvcbp_deaths |> select(-c(source_table, facility)) |> 
+    select(date_of_death, booking_date, race, gender, age_at_time_of_death, facility_name, type, everything()),
+  columns = column_defs,
+  searchable = FALSE,
+  filterable = TRUE,
+  pagination = TRUE,
+  defaultColDef = colDef(
+    na = "–",
+    width = 80, 
+    style = list(
+      fontFamily = "Source Sans 3",
+      fontSize = "14px",
+      padding = "6px 12px",
+      whiteSpace = "nowrap"
+    )
+  ),
+  bordered = FALSE,
+  highlight = TRUE,
+  striped = FALSE
+)
+```
+:::
+
+<br>
+**Data Notes:**
+
+<p>You can view the original source file here:  
+<a href="https://wvpolicy.org/wp-content/uploads/2025/03/DCR-Deaths-in-Custody-Jan-2020-to-March-2025.pdf" target="_blank">DCR Deaths in Custody: Jan 2020–March 2025 (PDF)</a>.</p>
+
+<p>The dataset was released publicly in this article:  
+<a href="https://wvpolicy.org/are-fewer-people-dying-in-west-virginia-jails-or-is-the-state-simply-not-counting/" target="_blank">Are fewer people dying in West Virginia jails, or is the state simply not counting?</a></p>
+
+<p>Here are some FOIA request documents cited or referenced in that reporting:</p>
+
+<ul>
+  <li>
+    <a href="https://wvpolicy.org/wp-content/uploads/2024/10/2024-09-25-DCR-Response-to-Whitaker-Sara-N.-FOIA-request-inmate-count-09-03-24-deaths-PDs-25.pdf" target="_blank">
+      September 2024 FOIA response – death log from August 2024
+    </a>
+  </li>
+  <li>
+    <a href="https://wvpolicy.org/wp-content/uploads/2024/04/2024.01.16-DCR-Response-to-Tony-Mike-Gazette-FOIA-request-DCR-inmate-deaths-2009-present-1.pdf" target="_blank">
+      January 2024 FOIA response – deaths in custody (2009–present)
+    </a>
+  </li>
+  <li>
+    <a href="https://wvpolicy.org/wp-content/uploads/2025/02/2025.02.14-DHS-FOIA-Response-re-Inspector-General-reports.pdf" target="_blank">
+      February 2025 FOIA response – Inspector General reports
+    </a>
+  </li>
+</ul>

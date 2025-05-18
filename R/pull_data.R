@@ -33,7 +33,9 @@ facility_lookup <- read_csv("data/facility_lookup.csv")
 # ---- Merge facility info into wvcbp_deaths ----
 wvcbp_deaths <- wvcbp_deaths |>
   left_join(facility_lookup, by = "facility") |> 
-  filter(!is.na(date_of_death))
+  filter(!is.na(date_of_death)) |> 
+  mutate(across(c(race, gender, facility, manner_of_death, cause_of_death, 
+                  offender_status, county, source_table, facility_name, type), as.factor))
 
 # ---- Filter and clean West Virginia datasets ----
 wv_historical_state_counts <- get_wv_subset("historical_state_counts")
@@ -43,7 +45,9 @@ wv_latest_state_jurisdiction_counts <- get_wv_subset("latest_state_jurisdiction_
 
 # ---- Save as .rds files in the data/ folder ----
 saveRDS(wvcbp_deaths, file = "data/wvcbp_deaths.rds")
+write.csv(wvcbp_deaths, "data/wvcbp_deaths.csv", row.names = FALSE, na = "")
 saveRDS(wv_historical_state_counts, file = "data/wv_historical_state_counts.rds")
 saveRDS(wv_latest_facility_counts, file = "data/wv_latest_facility_counts.rds")
 saveRDS(wv_latest_state_counts, file = "data/wv_latest_state_counts.rds")
 saveRDS(wv_latest_state_jurisdiction_counts, file = "data/wv_latest_state_jurisdiction_counts.rds")
+

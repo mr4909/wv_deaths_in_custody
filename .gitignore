@@ -1,4 +1,9 @@
-**/data/
+# ───────────────────────────────
+# Ignore only specific folders inside /data/
+# ───────────────────────────────
+data/anchored-data/
+data/historical-data/
+data/latest-data/
 
 # ───────────────────────────────
 # RStudio local/session files
@@ -49,4 +54,3 @@ renv/staging/
 rsconnect/
 
 /.quarto/
-data/

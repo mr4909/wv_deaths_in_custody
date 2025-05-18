@@ -2,6 +2,30 @@
   display: none;
 }
 
+.narrow-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.button {
+  background-color: #d7790f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.button:hover,
+.button:focus {
+  color: #fff; /* Keep the original orange color */
+  text-decoration: none;
+}
 
 /* ---------- BASE RESET ---------- */
 html, body, #landing-page {
@@ -12,10 +36,6 @@ html, body, #landing-page {
 }
 
 /* ---------- FONT IMPORTS ---------- */
-@font-face {
-  font-family: 'ChampionHTF-Featherweight';
-  src: url('fonts/Champion HTF-Featherweight Regular.otf') format('opentype');
-}
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
 
@@ -34,6 +54,7 @@ body {
   padding: 0;
 }
 
+/*
 .content {
   max-width: 800px !important;
   margin-left: 20px !important;
@@ -45,16 +66,18 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1rem;
-}
+}*/
 
 h1 {
   font-family: "Source Serif 4", serif;
   font-weight: 600;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 h2 {
   border: none; /* Remove the underline */
+  text-align: center;
 }
 
 /* Custom Font Colors */

@@ -1,0 +1,22 @@
+facility,facility_name,type
+BCC,Beckley Correctional Center,Prison
+CCC,Charleston Correctional Center,Prison
+CRJ,Central Regional Jail,Jail
+ERJ,Eastern Regional Jail,Jail
+HCC,Huttonsville Correctional Center,Prison
+ISMCC,Inmate Services Management Control Center,Other
+LCC,Lakin Correctional Center,Prison
+MCDO,Mount Olive Correctional Complex (Medical Division),Prison
+MOCC,Mount Olive Correctional Complex,Prison
+NCC,Northern Correctional Center,Prison
+NCRJ,North Central Regional Jail,Jail
+NRJ,Northern Regional Jail,Jail
+OCCC,Ohio County Correctional Center,Prison
+PBCC,Parkersburg Correctional Center,Prison
+PHRJ,Potomac Highlands Regional Jail,Jail
+SCRJ,South Central Regional Jail,Jail
+SMCC,Stevens Correctional Center,Prison
+SRJ,Southern Regional Jail,Jail
+SWRJ,Southwestern Regional Jail,Jail
+TVRJ,Tygart Valley Regional Jail,Jail
+WRJ,Western Regional Jail,Jail

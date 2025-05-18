@@ -12,6 +12,8 @@ website:
         href: about.html
       - text: "Key Findings"
         href: key_findings.html
+      - text: "Data"
+        href: download_data.html
       - text: "Analysis"
         href: analysis.html
       - text: "Contact"
