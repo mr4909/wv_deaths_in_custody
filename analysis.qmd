@@ -64,7 +64,7 @@ df_wo_2025 <- df |> filter(year < 2025)
 
 ## Annual Trends
 
-The number of deaths each year provides a baseline view of overall mortality in West Virginia custody. Identifying spikes or declines helps flag potential changes in facility conditions, medical oversight, or reporting practices. 
+This section tracks the number of reported deaths by calendar year.
 
 ```{r, asis=TRUE}
 # Deaths per year for display
@@ -77,7 +77,7 @@ deaths_2024 <- annual_counts |> filter(year == 2024) |> pull(n)
 deaths_2025_ytd <- df |> filter(year == 2025, lubridate::month(date_of_death) <= 3) |> nrow()
 ```
 
-While deaths have been gradually declining in recent years, there were still `r deaths_2024` deaths in 2024. In the first three months of 2025 alone, there have already been `r deaths_2025_ytd` deaths reported.
+While deaths have been gradually declining in recent years, there were still `r deaths_2024` deaths in 2024. In the first three months of 2025 alone, there have already been `r deaths_2025_ytd` deaths reported. This raises questions about whether recent policy changes or population shifts are reducing risk—or if conditions remain just as deadly.
 
 ```{r}
 plot_deaths_by_year(df_wo_2025)
@@ -143,7 +143,9 @@ plot_deaths_by_var(df_wo_2025, "age") |>
 
 ## Offender Status (Jail)
 
-Many people who die in jail custody are held pretrial, meaning they have not yet been convicted of a crime. This breakdown focuses specifically on deaths in jail facilities.
+Many people who die in jail custody are being held pretrial, meaning they have not been convicted of a crime. Despite this, they are housed in facilities operating far [beyond their intended capacity](https://wvpolicy.org/officials-deny-overcrowding-but-29-of-people-in-jail-assigned-to-sleep-on-the-floor/). In some jails—like North Central Regional Jail—population levels have exceeded twice the design limit.
+
+As Sara Whitaker has documented, people in these overcapacity facilities are often forced to sleep on mats on the floor, with limited access to basic hygiene and medical care. These conditions are not temporary. In some jails, overcapacity has been the norm for years, raising serious concerns about safety, dignity, and the state’s duty of care.
 
 ```{r}
 df_jail <- df_wo_2025 |> filter(type == "Jail")
@@ -171,10 +173,8 @@ plot_deaths_by_var(df_prison, "offender_status")
 
 ## Cause of Death
 
-Cause of death fields are inconsistently reported but offer valuable insight into medical and systemic issues inside facilities. The leading cause may reflect underlying health conditions or facility-level healthcare failures.
-
 `r generate_summary_sentence(df_wo_2025, "cause_of_death")`
-`r generate_additional_cod_note(df_wo_2025)`
+`r generate_additional_cod_note(df_wo_2025)` These vague labels make it difficult to assess medical conditions or facility care quality.
 
 ```{r}
 plot_deaths_by_var(df_wo_2025, "cause_of_death")
@@ -182,9 +182,7 @@ plot_deaths_by_var(df_wo_2025, "cause_of_death")
 
 ## Manner of Death 
 
-Manner of death—how the death occurred—helps identify systemic failures such as suicide risk, overdose management, or neglect. This chart captures the official classification reported in each case.
-
-`r generate_summary_sentence(df_wo_2025, "manner_of_death")`
+`r generate_summary_sentence(df_wo_2025, "manner_of_death")` Classifying a death as "natural" doesn’t necessarily mean it was unavoidable. Further review is needed to assess access to medical care and facility conditions.
 
 ```{r}
 plot_deaths_by_var(df_wo_2025, "manner_of_death")
@@ -214,8 +212,7 @@ sentence <- paste0(
   top_jails$facility_name[1], " and ", top_jails$facility_name[2], "."
 )
 ```
-
-`r sentence`
+`r sentence` A forthcoming analysis will examine whether these facilities were operating over capacity and how that may relate to deaths.
 
 ```{r}
 reactable(
@@ -258,5 +255,11 @@ reactable(
   )
 )
 ```
+
+## Next Steps
+
+As part of the next phase of this analysis, I plan to calculate mortality rates by facility type and location. This will allow for comparisons that account for population size. For example, a facility with 5 deaths and an average daily population of 100 has a far higher death rate than one with 10 deaths and 1,000 people. These rates will help identify facilities where the risk of dying is especially high, regardless of total population.
+
+Projects like the [UCLA Behind Bars Data Project](https://uclaprisondata.org/) use similar methods to track death rates across systems—often using reported custody populations as denominators.
 
 ::::

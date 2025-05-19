@@ -53,7 +53,7 @@
     "href": "analysis.html#annual-trends",
     "title": "Analysis Walkthrough",
     "section": "Annual Trends",
-    "text": "Annual Trends\nThe number of deaths each year provides a baseline view of overall mortality in West Virginia custody. Identifying spikes or declines helps flag potential changes in facility conditions, medical oversight, or reporting practices.\nWhile deaths have been gradually declining in recent years, there were still 44 deaths in 2024. In the first three months of 2025 alone, there have already been 10 deaths reported."
+    "text": "Annual Trends\nThis section tracks the number of reported deaths by calendar year.\nWhile deaths have been gradually declining in recent years, there were still 44 deaths in 2024. In the first three months of 2025 alone, there have already been 10 deaths reported. This raises questions about whether recent policy changes or population shifts are reducing risk—or if conditions remain just as deadly."
   },
   {
     "objectID": "analysis.html#demographics",
@@ -67,7 +67,7 @@
     "href": "analysis.html#offender-status-jail",
     "title": "Analysis Walkthrough",
     "section": "Offender Status (Jail)",
-    "text": "Offender Status (Jail)\nMany people who die in jail custody are held pretrial, meaning they have not yet been convicted of a crime. This breakdown focuses specifically on deaths in jail facilities.\nFrom 2020 to 2024, most people who died in custody were classified as “PTF Pretrial Felon” (53% of deaths)."
+    "text": "Offender Status (Jail)\nMany people who die in jail custody are being held pretrial, meaning they have not been convicted of a crime. Despite this, they are housed in facilities operating far beyond their intended capacity. In some jails—like North Central Regional Jail—population levels have exceeded twice the design limit.\nAs Sara Whitaker has documented, people in these overcapacity facilities are often forced to sleep on mats on the floor, with limited access to basic hygiene and medical care. These conditions are not temporary. In some jails, overcapacity has been the norm for years, raising serious concerns about safety, dignity, and the state’s duty of care.\nFrom 2020 to 2024, most people who died in custody were classified as “PTF Pretrial Felon” (53% of deaths)."
   },
   {
     "objectID": "analysis.html#offender-status-prison",
@@ -81,21 +81,21 @@
     "href": "analysis.html#cause-of-death",
     "title": "Analysis Walkthrough",
     "section": "Cause of Death",
-    "text": "Cause of Death\nCause of death fields are inconsistently reported but offer valuable insight into medical and systemic issues inside facilities. The leading cause may reflect underlying health conditions or facility-level healthcare failures.\nFrom 2020 to 2024, most people who died in custody died from heart disease (29% of deaths). However, 41 deaths (15%) were classified as “Other/unknown” and 52 deaths (19%) as “All other illnesses.”"
+    "text": "Cause of Death\nFrom 2020 to 2024, most people who died in custody died from heart disease (29% of deaths). However, 41 deaths (15%) were classified as “Other/unknown” and 52 deaths (19%) as “All other illnesses.” These vague labels make it difficult to assess medical conditions or facility care quality."
   },
   {
     "objectID": "analysis.html#manner-of-death",
     "href": "analysis.html#manner-of-death",
     "title": "Analysis Walkthrough",
     "section": "Manner of Death",
-    "text": "Manner of Death\nManner of death—how the death occurred—helps identify systemic failures such as suicide risk, overdose management, or neglect. This chart captures the official classification reported in each case.\nFrom 2020 to 2024, most people who died in custody died from natural causes (65% of deaths)."
+    "text": "Manner of Death\nFrom 2020 to 2024, most people who died in custody died from natural causes (65% of deaths). Classifying a death as “natural” doesn’t necessarily mean it was unavoidable. Further review is needed to assess access to medical care and facility conditions."
   },
   {
     "objectID": "analysis.html#facilities-with-the-most-deaths",
     "href": "analysis.html#facilities-with-the-most-deaths",
     "title": "Analysis Walkthrough",
     "section": "Facilities With the Most Deaths",
-    "text": "Facilities With the Most Deaths\nSome facilities account for a disproportionately high number of deaths.\nCurrently investigating whether these patterns may be related to conditions such as overcrowding or staffing shortages. As part of the next phase of this analysis, I will calculate mortality rates, using population data.\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail."
+    "text": "Facilities With the Most Deaths\nSome facilities account for a disproportionately high number of deaths.\nCurrently investigating whether these patterns may be related to conditions such as overcrowding or staffing shortages. As part of the next phase of this analysis, I will calculate mortality rates, using population data.\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail. A forthcoming analysis will examine whether these facilities were operating over capacity and how that may relate to deaths."
   },
   {
     "objectID": "analysis.html#net-change-in-deaths-2020-vs-2024",
@@ -159,5 +159,12 @@
     "title": "\nUncovering Deaths in West Virginia Jails and Prisons\n",
     "section": "",
     "text": "Uncovering Deaths in West Virginia Jails and Prisons\n\n\nInsights into where, when, and why people are dying in custody.\n\nView Key Findings"
+  },
+  {
+    "objectID": "analysis.html#next-steps",
+    "href": "analysis.html#next-steps",
+    "title": "Analysis Walkthrough",
+    "section": "Next Steps",
+    "text": "Next Steps\nAs part of the next phase of this analysis, I plan to calculate mortality rates by facility type and location. This will allow for comparisons that account for population size. For example, a facility with 5 deaths and an average daily population of 100 has a far higher death rate than one with 10 deaths and 1,000 people. These rates will help identify facilities where the risk of dying is especially high, regardless of total population.\nProjects like the UCLA Behind Bars Data Project use similar methods to track death rates across systems—often using reported custody populations as denominators."
   }
 ]
