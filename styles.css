@@ -194,10 +194,14 @@ main.content {
   align-items: center;
 }
 
-/* ---------- STATS BLOCK ---------- */
+.kf-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
 
 .big-number {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #2b2f86;
   margin-top: 1rem;
@@ -209,6 +213,51 @@ main.content {
   font-size: 1.25rem;
   color: #111;
   margin-bottom: 0.5rem;
+}
+
+.image-text-row {
+  display: flex;
+  max-width: 900px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 1rem; /* reduce from 2rem */
+  margin-bottom: 1.5rem; 
+}
+
+.image-col {
+  flex: 1 1 40%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.image-col img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-col {
+  flex: 1 1 55%;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-row .big-number {
+  margin: 0;
+}
+
+.stat-row .stat-caption {
+  font-size: 1.25rem;
+  color: #111;
+  max-width: 500px;
 }
 
 /* ---------- NAVIGATION BAR ---------- */

@@ -10,6 +10,15 @@ format:
     toc: false
 ---
 
+::: {#page-banner}
+<h1 class="page-title">
+
+Key Findings
+
+</h1>
+:::
+
+::::::::::::::::::::: kf-page
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -17,17 +26,33 @@ knitr::opts_chunk$set(
   message = FALSE,
   include = TRUE
 )
+
+source("R/setup.R")
+source("R/utils_helpers.R")
+
+# Load WV Center on Budget and Policy data
+wvcbp_deaths <- readRDS("data/wvcbp_deaths_in_custody.rds")
+
+df <- prepare_deaths_data(wvcbp_deaths)
+df_wo_2025 <- df |> filter(year < 2025)
 ```
 
-::::::: {.kf-white data-aos="fade-up"}
+::::::::: {.kf-white data-aos="fade-up"}
+<!-- Row 1 -->
+
+::::: stat-row
 ::: big-number
-279
+274
 :::
 
 ::: stat-caption
-people died in DCR custody from 2020 through 2024.
+people died while incarcerated in West Virginia jails and prisons from 2020 through 2024.
 :::
+:::::
 
+<!-- Row 2 -->
+
+::::: stat-row
 ::: big-number
 10
 :::
@@ -35,15 +60,40 @@ people died in DCR custody from 2020 through 2024.
 ::: stat-caption
 additional deaths were reported in the first three months of 2025.
 :::
-:::::::
+:::::
+:::::::::
 
-:::: {.kf-blue data-aos="zoom-in"}
-::: narrow-page
-Mount Olive Correctional Complex had the highest number of prison deaths. Southern Regional Jail had the highest number of jail deaths.
-
-As of December 2023, Southern Regional Jail was operating at 141% of its original design capacity, with 156 people assigned to sleep on the floor—conditions known to increase risk of harm.
+:::::: {.kf-blue data-aos="zoom-in"}
+::::: image-text-row
+::: {.text-col style="margin-top: 1.5rem;"}
+**Heart disease** was the most commonly reported cause of death among people in custody. But 41 deaths (15%) were labeled as “Other/unknown” and 52 deaths (19%) as “All other illnesses.” <br><br> These vague categories make it difficult to understand what medical conditions contributed to these deaths—or whether they could have been prevented.
 :::
-::::
 
-::: {.kf-white data-aos="zoom-in"}
+::: image-col
+![](img/heart1.png)
 :::
+:::::
+::::::
+
+::::::::: {.kf-white data-aos="zoom-in"}
+::::: image-text-row
+::: image-col
+![](img/mountolive.png)
+:::
+
+::: text-col
+**Mount Olive Correctional Complex had the highest number of prison deaths.** Conditions in state prisons warrant further investigation, particularly related to access to healthcare and population aging.
+:::
+:::::
+
+::::: image-text-row
+::: image-col
+![](img/srj.png)
+:::
+
+::: text-col
+**Southern Regional Jail had the highest number of prison deaths.** As of December 2023, Southern Regional Jail was operating at **141% of its original design capacity**, with **156 people assigned to sleep on the floor**—conditions known to increase risk of harm.
+:::
+:::::
+:::::::::
+:::::::::::::::::::::

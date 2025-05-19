@@ -12,16 +12,14 @@ format:
 
 ::: {#page-banner}
 <h1 class="page-title">
-
 Analysis Walkthrough
-
 </h1>
 :::
 
 :::: narrow-page
 ## About the Data
 
-This dataset includes 289 deaths in [West Virginia Division of Corrections and Rehabilitation (DCR)](https://dcr.wv.gov/Pages/default.aspx) custody from January 2020 through March 2025. It was obtained by the [West Virginia Center on Budget and Policy](https://wvpolicy.org/) through a FOIA request filed by senior policy analyst [Sara Whitaker](https://wvpolicy.org/team/).
+This dataset includes 284 deaths in [West Virginia Division of Corrections and Rehabilitation (DCR)](https://dcr.wv.gov/Pages/default.aspx) custody from January 2020 through March 2025. It was obtained by the [West Virginia Center on Budget and Policy](https://wvpolicy.org/) through a FOIA request filed by senior policy analyst [Sara Whitaker](https://wvpolicy.org/team/).
 
 Each row represents a death, with key fields including:
 

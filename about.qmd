@@ -60,7 +60,7 @@ This includes:
 
 This site features:
 
-- A downloadable, cleaned dataset of 289 deaths from 2020 to 2025  
+- A downloadable, cleaned dataset of 284 deaths from 2020 to 2025  
 - Interactive charts exploring **facility-level patterns**  
 - Filters by **age, gender, race, cause of death, and custody status**  
 - A research log to document data issues, assumptions, and updates  
