@@ -9,7 +9,7 @@
 }
 
 .button {
-  background-color: #3F8BCA;
+  background-color: #ef3c23;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -29,9 +29,9 @@
 
 /* Style the inactive (default) tabs */
 .nav-pills .nav-link {
-  color: #3F8BCA;                /* orange text */
+  color: #ef3c23;                /* orange text */
   background-color: white;       /* white background */
-  border: 1px solid #3F8BCA;
+  border: 1px solid #ef3c23;
   border-radius: 4px;
   margin-right: 5px;
   padding: 6px 12px;
@@ -41,8 +41,8 @@
 /* Style the active tab */
 .nav-pills .nav-link.active {
   color: white !important;       /* white text */
-  background-color: #3F8BCA !important; /* orange background */
-  border-color: #3F8BCA;
+  background-color: #ef3c23 !important; /* orange background */
+  border-color: #ef3c23;
 }
 
 
@@ -59,7 +59,7 @@ html, body, #landing-page {
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
 
 code {
-  color: #3F8BCA !important; 
+  color: #ef3c23 !important; 
   background-color: transparent;
   font-weight: 600;
 }
@@ -92,7 +92,7 @@ h1 {
   font-weight: 600;
   font-size: 2.5rem;
   text-align: center;
-  color: #3F8BCA;
+  color: #fff;
 }
 
 h2 {
@@ -102,7 +102,7 @@ h2 {
 
 /* ---------- LANDING PAGE ---------- */
 #landing-page {
-  background-color: #3F8BCA; /* Fallback background */
+  background-color: #ef3c23; /* Fallback background */
   background-image: url("img/banner.svg");
   background-size: cover;
   background-position: center;
@@ -123,7 +123,7 @@ h2 {
 }
 
 #landing-page a {
-  color: #3F8BCA; /* Matches background for visual consistency */
+  color: #ef3c23; 
 }
 
 /* Landing page title and subtitle */
@@ -132,7 +132,7 @@ h2 {
   font-weight: 700;
   margin-bottom: 0.5rem;
   text-align: center;
-  color: #3F8BCA; /* Note: same as background – consider increasing contrast if layered */
+  color: #fff; 
 }
 
 #landing-page .page-subtitle {
@@ -141,13 +141,13 @@ h2 {
   margin-bottom: 2rem;
   text-align: center;
   max-width: 600px;
-  color: #283224;
+  color: #fff;
 }
 
 /* Call-to-action button */
 #landing-page .banner-button {
   background-color: white;
-  color: #3F8BCA;
+  color: #ef3c23;
   padding: 10px 20px;
   border: none;
   text-decoration: none;
@@ -164,8 +164,8 @@ h2 {
 }
 
 #page-banner {
-  background-image: url("img/banner.svg");
-  background-color: #3F8BCA
+  /*background-image: url("img/banner.svg");*/
+  background-color: #ef3c23; 
   color: #fff;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -184,7 +184,7 @@ main.content {
 /* Style for navigation menu */
 .navbar,
 .navbar-dark {
-  background-color: #3F8BCA !important;
+  background-color: #ef3c23 !important;
   border-bottom: 1px solid white;
 }
 
@@ -207,19 +207,20 @@ main.content {
 }
 
 /* ---------- GLOBAL LINKS (NON-NAVBAR) ---------- */
+
 body a,
 body a:visited {
-  color: #283224;
+  color: #ef3c23;
   text-decoration: underline;
-  text-decoration-color: #3F8BCA;
+  text-decoration-color: #ef3c23;
   text-underline-offset: 2px;
 }
 
 body a:hover,
 body a:focus {
-  color: #283224;
+  color: #ef3c23;
   text-decoration: underline;
-  text-decoration-color: #3F8BCA;
+  text-decoration-color: #ef3c23;
 }
 
 /* ---------- CALLOUTS ---------- */

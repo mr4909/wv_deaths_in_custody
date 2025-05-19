@@ -11,7 +11,7 @@
     "href": "analysis.html#about-the-data",
     "title": "Analysis Walkthrough",
     "section": "About the Data",
-    "text": "About the Data\nThis dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by policy analyst Sara Whitaker.\nEach row represents a death, with key fields including:\n\ndate_of_death and booking_date\nage, race, gender\nfacility and offender_status (e.g., pretrial vs. sentenced)\nmanner_of_death and cause_of_death\n\nDCR’s annual reports do not publish this level of detail. Jail deaths are excluded, and no information is provided by facility, demographics, or cause. This dataset allows for deeper analysis of where, when, and how people are dying in custody."
+    "text": "About the Data\nThis dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by senior policy analyst Sara Whitaker.\nEach row represents a death, with key fields including:\n\ndate_of_death and booking_date\nage, race, gender\nfacility and offender_status (e.g., pretrial vs. sentenced)\nmanner_of_death and cause_of_death\n\nDCR’s annual reports do not publish this level of detail. Jail deaths are excluded, and no information is provided by facility, demographics, or cause. This dataset allows for deeper analysis of where, when, and how people are dying in custody."
   },
   {
     "objectID": "analysis.html#exploratory-data-analysis",
@@ -123,6 +123,27 @@
     "href": "analysis.html#cause-and-manner-of-death",
     "title": "Analysis Walkthrough",
     "section": "Cause and Manner of Death",
-    "text": "Cause and Manner of Death"
+    "text": "Cause and Manner of Death\nFrom 2020 to 2024, most people who died in custody were heart disease.\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were natural."
+  },
+  {
+    "objectID": "analysis.html#demographics",
+    "href": "analysis.html#demographics",
+    "title": "Analysis Walkthrough",
+    "section": "Demographics",
+    "text": "Demographics\n\nRaceGenderAge\n\n\nFrom 2020 to 2024, most people who died in custody were White.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were male.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were 60-69 years old."
+  },
+  {
+    "objectID": "analysis.html#offender-status-jail",
+    "href": "analysis.html#offender-status-jail",
+    "title": "Analysis Walkthrough",
+    "section": "Offender Status (Jail)",
+    "text": "Offender Status (Jail)\n\n\nFrom 2020 to 2024, most people who died in custody were classified as \"Convicted\"."
+  },
+  {
+    "objectID": "analysis.html#offender-status-prison",
+    "href": "analysis.html#offender-status-prison",
+    "title": "Analysis Walkthrough",
+    "section": "Offender Status (Prison)",
+    "text": "Offender Status (Prison)\n\n\nFrom 2020 to 2024, most people who died in custody were classified as \"Convicted\"."
   }
 ]

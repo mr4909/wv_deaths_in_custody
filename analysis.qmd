@@ -21,7 +21,7 @@ Analysis Walkthrough
 :::: narrow-page
 ## About the Data
 
-This dataset includes 289 deaths in West Virginia Division of Corrections and Rehabilitation (DCR) custody from January 2020 through March 2025. It was obtained by the West Virginia Center on Budget and Policy through a FOIA request filed by policy analyst Sara Whitaker.
+This dataset includes 289 deaths in [West Virginia Division of Corrections and Rehabilitation (DCR)](https://dcr.wv.gov/Pages/default.aspx) custody from January 2020 through March 2025. It was obtained by the [West Virginia Center on Budget and Policy](https://wvpolicy.org/) through a FOIA request filed by senior policy analyst [Sara Whitaker](https://wvpolicy.org/team/).
 
 Each row represents a death, with key fields including:
 
@@ -59,51 +59,99 @@ source("R/utils_helpers.R")
 wvcbp_deaths <- readRDS("data/wvcbp_deaths_in_custody.rds")
 
 df <- prepare_deaths_data(wvcbp_deaths)
+df_wo_2025 <- df |> filter(year < 2025)
 ```
 
 ## Annual Trends
 
 ```{r}
-plot_deaths_by_year(df)
+plot_deaths_by_year(df_wo_2025)
 ```
 
-## Characteristics
+## Demographics
 ::: {.panel-tabset .nav-pills}
 
 ### Race
 
+`r generate_summary_sentence(df_wo_2025, "race")`
+
 ```{r}
-plot_deaths_by_var(df, "race") |>
+plot_deaths_by_var(df_wo_2025, "race") |>
   hc_chart(height = 350)
 ```
 
 ### Gender
 
+`r generate_summary_sentence(df_wo_2025, "gender")`
+
 ```{r}
-plot_deaths_by_var(df, "gender") |>
+plot_deaths_by_var(df_wo_2025, "gender") |>
   hc_chart(height = 350)
 ```
 
 ### Age
 
-```{r}
-plot_deaths_by_var(df, "age") |>
-  hc_chart(height = 350)
-```
-
-## Offender Status
+`r generate_summary_sentence(df_wo_2025, "age")`
 
 ```{r}
-plot_deaths_by_var(df, "offender_status") |>
+plot_deaths_by_var(df_wo_2025, "age") |>
   hc_chart(height = 350)
 ```
 :::
 
+## Offender Status (Jail)
+
+```{r, asis=TRUE}
+df_jail <- df_wo_2025 |> filter(type == "Jail")
+cat(generate_summary_sentence(df_wo_2025, "offender_status"))
+plot_deaths_by_var(df_jail, "offender_status")
+```
+
+## Offender Status (Prison)
+
+```{r, asis=TRUE}
+df_prison <- df_wo_2025 |> filter(type == "Prison")
+cat(generate_summary_sentence(df_prison, "offender_status"))
+plot_deaths_by_var(df_prison, "offender_status") 
+```
+
+
+## Cause and Manner of Death
+
+`r generate_summary_sentence(df_wo_2025, "cause_of_death")`
+
+```{r}
+plot_deaths_by_var(df_wo_2025, "cause_of_death")
+```
+
+`r generate_summary_sentence(df_wo_2025, "manner_of_death")`
+
+```{r}
+plot_deaths_by_var(df_wo_2025, "manner_of_death")
+```
+
+## Facilities With the Most Deaths
+
+```{r}
+top_facilities <- df_wo_2025 |>
+  group_by(type, facility_name) |>
+  summarise(total_deaths = n(), .groups = "drop") |>
+  arrange(desc(total_deaths))
+
+reactable(
+  top_facilities,
+  theme = reactable_theme(),
+  filterable = FALSE,
+  pagination = FALSE,
+  defaultColDef = colDef(na = "–")
+)
+```
+
 ## Net Change in Deaths: 2020 vs 2024
 
 ```{r}
-calculate_net_change <- function(df, start_year = 2020, end_year = 2024) {
-  df |>
+calculate_net_change <- function(df_wo_2025, start_year = 2020, end_year = 2024) {
+  df_wo_2025 |>
     filter(year %in% c(start_year, end_year)) |>
     count(facility_name, year) |>
     pivot_wider(names_from = year, values_from = n, values_fill = 0) |>
@@ -116,37 +164,10 @@ net_change_df <- calculate_net_change(df) |>
 reactable(
   net_change_df,
   theme = reactable_theme(),
-  filterable = TRUE,
-  pagination = TRUE,
+  filterable = FALSE,
+  pagination = FALSE,
   defaultColDef = colDef(na = "–")
 )
-```
-
-## Facilities With the Most Deaths
-
-```{r}
-top_facilities <- df |>
-  group_by(type, facility_name) |>
-  summarise(total_deaths = n(), .groups = "drop") |>
-  arrange(desc(total_deaths))
-
-reactable(
-  top_facilities,
-  theme = reactable_theme(),
-  filterable = TRUE,
-  pagination = TRUE,
-  defaultColDef = colDef(na = "–")
-)
-```
-
-## Cause and Manner of Death
-
-```{r}
-plot_deaths_by_var(df, "cause_of_death")
-```
-
-```{r}
-plot_deaths_by_var(df, "manner_of_death")
 ```
 
 ::::

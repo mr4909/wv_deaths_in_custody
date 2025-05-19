@@ -112,8 +112,12 @@ hc_custom_theme <- hc_theme(
     itemStyle = list(fontFamily = "Source Sans 3, sans-serif"),
     itemHoverStyle = list(fontWeight = "bold")
   ),
-  colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
+  # colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
+  # colors = c("#1b4793", "#fac92c", "#f7b0be", "#2178ae", "#ef3c23", "#ed8e83", "#f15a42")
+  colors = c("#ff5738", "#edba3d", "#95b0dd", "#024555")
 )
+
+
 
 # ------------------------
 # Reactable Theme
@@ -139,7 +143,6 @@ reactable_theme <- function(...) {
     ),
     cellStyle = list(
       padding = "6px 12px",
-      whiteSpace = "nowrap",
       borderBottom = "1px solid #f0f0f0"
     ),
     highlightColor = "#f4f4f4",
@@ -172,10 +175,12 @@ plot_deaths_by_var <- function(df, var_name) {
   df |>
     count(!!var_sym, sort = TRUE) |>
     mutate(!!var_sym := fct_reorder(!!var_sym, n)) |>
-    hchart("column", hcaes(x = !!var_sym, y = n)) |>
+    hchart("column", hcaes(x = !!var_sym, y = n), name = paste("Deaths:", label_clean)) |>
     hc_title(text = paste("Deaths by", label_clean)) |>
     hc_xAxis(title = list(text = label_clean)) |>
-    hc_yAxis(title = list(text = "Number of Deaths")) |>
+    hc_yAxis(title = list(text = "Number of Deaths"), min = 0) |>
+    hc_tooltip(enabled = TRUE) |>
+    hc_exporting(enabled = TRUE) |> 
     hc_add_theme(hc_custom_theme)
 }
 
@@ -190,10 +195,12 @@ plot_deaths_by_var <- function(df, var_name) {
 plot_deaths_by_year <- function(df) {
   df |>
     count(year) |>
-    hchart("line", hcaes(x = year, y = n)) |>
+    hchart("line", hcaes(x = year, y = n), name = "Annual Deaths") |> 
     hc_title(text = "Deaths Over Time (All Facilities)") |>
     hc_xAxis(title = list(text = "Year")) |>
-    hc_yAxis(title = list(text = "Number of Deaths")) |>
+    hc_yAxis(title = list(text = "Number of Deaths"), min = 0) |>
+    hc_tooltip(enabled = TRUE) |>
+    hc_exporting(enabled = TRUE) |> 
     hc_add_theme(hc_custom_theme)
 }
 
@@ -218,8 +225,9 @@ plot_facility_trends <- function(df, min_total = 5) {
     hchart("line", hcaes(x = year, y = n, group = facility_name)) |>
     hc_title(text = "Deaths Over Time by Facility") |>
     hc_xAxis(title = list(text = "Year")) |>
-    hc_yAxis(title = list(text = "Number of Deaths")) |>
-    hc_tooltip(shared = TRUE) |>
+    hc_yAxis(title = list(text = "Number of Deaths"), min = 0) |>
+    hc_tooltip(enabled = TRUE) |>
+    hc_exporting(enabled = TRUE) |> 
     hc_add_theme(hc_custom_theme)
 }
 
@@ -245,3 +253,50 @@ calculate_net_change <- function(df, start_year = 2020, end_year = 2024) {
     mutate(net_change = !!sym(as.character(end_year)) - !!sym(as.character(start_year))) |>
     arrange(desc(net_change))
 }
+
+# ------------------------
+# Summary Sentences
+# ------------------------
+
+#' @title Generate Summary Sentence for Most Common Group
+#'
+#' @description
+#' Creates a sentence summarizing the most common value for a specified variable 
+#' in a deaths-in-custody dataset between two years. The sentence is suitable 
+#' for use as an annotation above a graph.
+#'
+#' @param df A data frame containing deaths data, with at least a `year` column 
+#'   and the specified variable.
+#' @param var A character string indicating the column name to summarize 
+#'   (e.g., "race", "age", "offender_status").
+#' @param start_year An integer specifying the start year for filtering (default is 2020).
+#' @param end_year An integer specifying the end year for filtering (default is 2024).
+#'
+#' @return A character string with a formatted sentence, e.g., 
+#'   "From 2020 to 2024, most people who died in custody were classified as \"Pretrial\"."
+#'
+#' @examples
+#' generate_summary_sentence(df, "race")
+#' generate_summary_sentence(df_jail, "offender_status")
+#'
+#' @export
+generate_summary_sentence <- function(df, var, start_year = 2020, end_year = 2024) {
+  df_filtered <- df %>% filter(year >= start_year, year <= end_year)
+  most_common <- df_filtered %>%
+    count(.data[[var]]) %>%
+    arrange(desc(n)) %>%
+    slice(1) %>%
+    pull(1)
+  
+  # Customize phrasing
+  label <- case_when(
+    var == "age" ~ paste0(most_common, " years old"),
+    var == "offender_status" ~ paste0('classified as "', most_common, '"'),
+    var == "race" ~ most_common,
+    TRUE ~ tolower(most_common)
+  )
+  
+  paste0("From ", start_year, " to ", end_year, ", most people who died in custody were ", label, ".")
+}
+
+
