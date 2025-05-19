@@ -9,7 +9,7 @@
 }
 
 .button {
-  background-color: #1b4793;
+  background-color: #0d102f;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -29,9 +29,9 @@
 
 /* Style the inactive (default) tabs */
 .nav-pills .nav-link {
-  color: #1b4793;                /* orange text */
+  color: #0d102f;                /* orange text */
   background-color: white;       /* white background */
-  border: 1px solid #1b4793;
+  border: 1px solid #0d102f;
   border-radius: 4px;
   margin-right: 5px;
   padding: 6px 12px;
@@ -41,8 +41,8 @@
 /* Style the active tab */
 .nav-pills .nav-link.active {
   color: white !important;       /* white text */
-  background-color: #1b4793 !important; /* orange background */
-  border-color: #1b4793;
+  background-color: #0d102f !important; /* orange background */
+  border-color: #0d102f;
 }
 
 
@@ -59,7 +59,7 @@ html, body, #landing-page {
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap');
 
 code {
-  color: #1b4793 !important; 
+  color: #0d102f !important; 
   background-color: transparent;
   font-weight: 600;
 }
@@ -88,7 +88,7 @@ h2 {
 
 /* ---------- LANDING PAGE ---------- */
 #landing-page {
-  background-color: #1b4793; /* Fallback background */
+  background-color: #0d102f; /* Fallback background */
   background-image: url("img/banner.svg");
   background-size: cover;
   background-position: center;
@@ -109,7 +109,7 @@ h2 {
 }
 
 #landing-page a {
-  color: #1b4793; 
+  color: #0d102f; 
 }
 
 /* Landing page title and subtitle */
@@ -133,7 +133,7 @@ h2 {
 /* Call-to-action button */
 #landing-page .banner-button {
   background-color: white;
-  color: #1b4793;
+  color: #0d102f;
   padding: 10px 20px;
   border: none;
   text-decoration: none;
@@ -151,7 +151,7 @@ h2 {
 
 #page-banner {
   /*background-image: url("img/banner.svg");*/
-  background-color: #1b4793; 
+  background-color: #0d102f; 
   color: #fff;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -169,7 +169,7 @@ main.content {
 
 .kf-white {
   background-color: #fff;
-  color: #1b4793;
+  color: #0d102f;
   padding: 2rem;
   border-radius: 8px;
   width: 100%;
@@ -181,8 +181,9 @@ main.content {
 }
 
 .kf-blue {
-  background-color: #1b4793;
+  background-color: #0d102f;
   color: #fff;
+  font-size: 1em;
   padding: 2rem;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -193,11 +194,28 @@ main.content {
   align-items: center;
 }
 
+/* ---------- STATS BLOCK ---------- */
+
+.big-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #2b2f86;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+
+.stat-caption {
+  font-size: 1.25rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
 /* ---------- NAVIGATION BAR ---------- */
 /* Style for navigation menu */
 .navbar,
 .navbar-dark {
-  background-color: #1b4793 !important;
+  background-color: #0d102f !important;
   border-bottom: 1px solid white;
 }
 
@@ -223,17 +241,17 @@ main.content {
 
 body a,
 body a:visited {
-  color: #1b4793;
+  color: #0d102f;
   text-decoration: underline;
-  text-decoration-color: #1b4793;
+  text-decoration-color: #0d102f;
   text-underline-offset: 2px;
 }
 
 body a:hover,
 body a:focus {
-  color: #1b4793;
+  color: #0d102f;
   text-decoration: underline;
-  text-decoration-color: #1b4793;
+  text-decoration-color: #0d102f;
 }
 
 /* ---------- CALLOUTS ---------- */
@@ -246,39 +264,8 @@ body a:focus {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* ---------- CONTENT WRAPPERS ---------- */
-.section {
-  padding: 4rem 2rem;
-}
 
-/* ---------- STATS BLOCK ---------- */
-.stats-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem 0;
-}
 
-.stat {
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-}
 
-.stat .number {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
 
-.stat .label {
-  font-size: 1rem;
-  margin-top: 0.25rem;
-}
 
-/* ---------- MISCELLANEOUS ---------- */
-/* Hero section introduction */
-.hero-intro {
-  max-width: 750px;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}

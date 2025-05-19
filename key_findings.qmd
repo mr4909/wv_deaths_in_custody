@@ -10,7 +10,6 @@ format:
     toc: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -20,25 +19,31 @@ knitr::opts_chunk$set(
 )
 ```
 
-<div class="kf-white" data-aos="fade-up">
-## Key Finding 1
-TBD
-</div>
+::::::: {.kf-white data-aos="fade-up"}
+::: big-number
+279
+:::
 
-<div class="kf-blue" data-aos="zoom-in">
-## Key Finding 2
-TBD
-</div>
+::: stat-caption
+people died in DCR custody from 2020 through 2024.
+:::
 
-<div class="kf-white" data-aos="zoom-in">
-## Key Finding 3
-TBD
-</div>
+::: big-number
+10
+:::
 
+::: stat-caption
+additional deaths were reported in the first three months of 2025.
+:::
+:::::::
 
+:::: {.kf-blue data-aos="zoom-in"}
+::: narrow-page
+Mount Olive Correctional Complex had the highest number of prison deaths. Southern Regional Jail had the highest number of jail deaths.
 
+As of December 2023, Southern Regional Jail was operating at 141% of its original design capacity, with 156 people assigned to sleep on the floor—conditions known to increase risk of harm.
+:::
+::::
 
-
-
-
-
+::: {.kf-white data-aos="zoom-in"}
+:::

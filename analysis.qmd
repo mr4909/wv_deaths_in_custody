@@ -192,8 +192,6 @@ plot_deaths_by_var(df_wo_2025, "manner_of_death")
 
 Some facilities account for a disproportionately high number of deaths.
 
-Currently investigating whether these patterns may be related to conditions such as overcrowding or staffing shortages. As part of the next phase of this analysis, I will calculate mortality rates, using population data.
-
 ```{r}
 top_facilities <- df_wo_2025 |>
   group_by(type, facility_name) |>
@@ -212,7 +210,7 @@ sentence <- paste0(
   top_jails$facility_name[1], " and ", top_jails$facility_name[2], "."
 )
 ```
-`r sentence` A forthcoming analysis will examine whether these facilities were operating over capacity and how that may relate to deaths.
+`r sentence` As of December 2023, North Central Regional Jail was operating at 193% of its original design capacity, with 228 people assigned to sleep on the floor. Southern Regional Jail was at 141% of design capacity, with 156 people sleeping on the floor. These conditions pose serious safety risks. Overcrowding reduces access to medical care, increases the spread of illness, and makes it harder for staff to prevent suicide or respond to medical emergencies.
 
 ```{r}
 reactable(
@@ -258,7 +256,7 @@ reactable(
 
 ## Next Steps
 
-As part of the next phase of this analysis, I plan to calculate mortality rates by facility type and location. This will allow for comparisons that account for population size. For example, a facility with 5 deaths and an average daily population of 100 has a far higher death rate than one with 10 deaths and 1,000 people. These rates will help identify facilities where the risk of dying is especially high, regardless of total population.
+As part of the next phase of this analysis, mortality rates by facility type and location will be calculated. This will allow for comparisons that account for population size. For example, a facility with 5 deaths and an average daily population of 100 has a far higher death rate than one with 10 deaths and 1,000 people. These rates will help identify facilities where the risk of dying is especially high, regardless of total population.
 
 Projects like the [UCLA Behind Bars Data Project](https://uclaprisondata.org/) use similar methods to track death rates across systems—often using reported custody populations as denominators.
 

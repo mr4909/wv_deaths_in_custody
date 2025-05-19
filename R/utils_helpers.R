@@ -112,10 +112,11 @@ hc_custom_theme <- hc_theme(
     itemStyle = list(fontFamily = "Source Sans 3, sans-serif"),
     itemHoverStyle = list(fontWeight = "bold")
   ),
-  #colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
-  colors = c("#1b4793", "#fac92c", "#f7b0be", "#2178ae", "#ef3c23", "#ed8e83", "#f15a42")
+  # colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
+  # colors = c("#1b4793", "#fac92c", "#f7b0be", "#2178ae", "#ef3c23", "#ed8e83", "#f15a42")
   # colors = c("#ff5738", "#edba3d", "#95b0dd", "#024555")
   # colors = c("#f66529")
+  colors = c("#2b2f86", "#cdcae5", "#eb1c24", "#f9cbcb")
 )
 
 # ------------------------

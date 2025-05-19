@@ -4,28 +4,7 @@
     "href": "key_findings.html",
     "title": "Key Findings",
     "section": "",
-    "text": "TBD"
-  },
-  {
-    "objectID": "key_findings.html#key-finding-1",
-    "href": "key_findings.html#key-finding-1",
-    "title": "Key Findings",
-    "section": "",
-    "text": "TBD"
-  },
-  {
-    "objectID": "key_findings.html#key-finding-2",
-    "href": "key_findings.html#key-finding-2",
-    "title": "Key Findings",
-    "section": "Key Finding 2",
-    "text": "Key Finding 2\nTBD"
-  },
-  {
-    "objectID": "key_findings.html#key-finding-3",
-    "href": "key_findings.html#key-finding-3",
-    "title": "Key Findings",
-    "section": "Key Finding 3",
-    "text": "Key Finding 3\nTBD"
+    "text": "279\n\n\npeople died in DCR custody from 2020 through 2024.\n\n\n10\n\n\nadditional deaths were reported in the first three months of 2025.\n\n\n\n\nMount Olive Correctional Complex had the highest number of prison deaths. Southern Regional Jail had the highest number of jail deaths.\nAs of December 2023, Southern Regional Jail was operating at 141% of its original design capacity, with 156 people assigned to sleep on the floor—conditions known to increase risk of harm."
   },
   {
     "objectID": "download_data.html",
@@ -95,7 +74,7 @@
     "href": "analysis.html#facilities-with-the-most-deaths",
     "title": "Analysis Walkthrough",
     "section": "Facilities With the Most Deaths",
-    "text": "Facilities With the Most Deaths\nSome facilities account for a disproportionately high number of deaths.\nCurrently investigating whether these patterns may be related to conditions such as overcrowding or staffing shortages. As part of the next phase of this analysis, I will calculate mortality rates, using population data.\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail. A forthcoming analysis will examine whether these facilities were operating over capacity and how that may relate to deaths."
+    "text": "Facilities With the Most Deaths\nSome facilities account for a disproportionately high number of deaths.\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail. As of December 2023, North Central Regional Jail was operating at 193% of its original design capacity, with 228 people assigned to sleep on the floor. Southern Regional Jail was at 141% of design capacity, with 156 people sleeping on the floor. These conditions pose serious safety risks. Overcrowding reduces access to medical care, increases the spread of illness, and makes it harder for staff to prevent suicide or respond to medical emergencies."
   },
   {
     "objectID": "analysis.html#net-change-in-deaths-2020-vs-2024",
@@ -103,6 +82,13 @@
     "title": "Analysis Walkthrough",
     "section": "Net Change in Deaths: 2020 vs 2024",
     "text": "Net Change in Deaths: 2020 vs 2024"
+  },
+  {
+    "objectID": "analysis.html#next-steps",
+    "href": "analysis.html#next-steps",
+    "title": "Analysis Walkthrough",
+    "section": "Next Steps",
+    "text": "Next Steps\nAs part of the next phase of this analysis, mortality rates by facility type and location will be calculated. This will allow for comparisons that account for population size. For example, a facility with 5 deaths and an average daily population of 100 has a far higher death rate than one with 10 deaths and 1,000 people. These rates will help identify facilities where the risk of dying is especially high, regardless of total population.\nProjects like the UCLA Behind Bars Data Project use similar methods to track death rates across systems—often using reported custody populations as denominators."
   },
   {
     "objectID": "about.html#purpose",
@@ -159,12 +145,5 @@
     "title": "\nUncovering Deaths in West Virginia Jails and Prisons\n",
     "section": "",
     "text": "Uncovering Deaths in West Virginia Jails and Prisons\n\n\nInsights into where, when, and why people are dying in custody.\n\nView Key Findings"
-  },
-  {
-    "objectID": "analysis.html#next-steps",
-    "href": "analysis.html#next-steps",
-    "title": "Analysis Walkthrough",
-    "section": "Next Steps",
-    "text": "Next Steps\nAs part of the next phase of this analysis, I plan to calculate mortality rates by facility type and location. This will allow for comparisons that account for population size. For example, a facility with 5 deaths and an average daily population of 100 has a far higher death rate than one with 10 deaths and 1,000 people. These rates will help identify facilities where the risk of dying is especially high, regardless of total population.\nProjects like the UCLA Behind Bars Data Project use similar methods to track death rates across systems—often using reported custody populations as denominators."
   }
 ]

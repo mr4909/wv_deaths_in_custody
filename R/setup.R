@@ -42,3 +42,29 @@ required_packages <- c(
 
 # Load packages quietly
 invisible(lapply(required_packages, library, character.only = TRUE))
+
+colors = c("#1b4793")
+
+colors = c("#0d102f", 
+           "#2b2f86",
+           "#6666ae",
+           "#cdcae5",
+           "#22409a",
+           
+           
+           "#eb1c24",
+           "#f06666",
+           "#f9cbcb",
+           
+           "#19331a",
+           "#00a14b",
+           "#77c04d",
+           "#356734",
+           "#99cb98",
+           "#d1e7c3"
+           )
+
+
+
+
+
