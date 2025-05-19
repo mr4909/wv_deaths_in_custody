@@ -73,20 +73,6 @@ body {
   padding: 0;
 }
 
-/*
-.content {
-  max-width: 800px !important;
-  margin-left: 20px !important;
-  padding: 1rem 2rem;
-}
-
-.quarto-container {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}*/
-
 h1 {
   font-family: "Source Serif 4", serif;
   font-weight: 600;
@@ -181,23 +167,30 @@ main.content {
 
 /* ---------- KEY FINDINGS PAGE ---------- */
 
-#key-findings {
-  background-color: #1b4793; /* light blue background */
+.kf-white {
+  background-color: #fff;
+  color: #1b4793;
   padding: 2rem;
   border-radius: 8px;
-  
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  min-height: 100vh;
-  padding: 2em;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff; 
+}
+
+.kf-blue {
+  background-color: #1b4793;
+  color: #fff;
+  padding: 2rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ---------- NAVIGATION BAR ---------- */

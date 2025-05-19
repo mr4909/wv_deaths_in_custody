@@ -3,12 +3,13 @@ title: 'Key Findings'
 format:
   html:
     css: styles.css
-    embed-resources: TRUE
+    embed-resources: true
     code-fold: false
     page-layout: full
     fig_caption: yes
     toc: false
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -19,28 +20,20 @@ knitr::opts_chunk$set(
 )
 ```
 
-<div id="key-findings">
+<div class="kf-white" data-aos="fade-up">
 ## Key Finding 1
-<div data-aos="fade-up">
 TBD
 </div>
 
+<div class="kf-blue" data-aos="zoom-in">
 ## Key Finding 2
-<div data-aos="zoom-in">
 TBD
 </div>
 
+<div class="kf-white" data-aos="zoom-in">
 ## Key Finding 3
-<div data-aos="zoom-in">
 TBD
 </div>
-</div>
-
-
-
-
-
-
 
 
 

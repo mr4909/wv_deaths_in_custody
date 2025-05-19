@@ -1,8 +1,8 @@
 {
-  "hash": "b00fef5541718e9b21925d320e2b9e95",
+  "hash": "81a0a267ea700caeab9e9f722fce4237",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: 'Key Findings'\nformat:\n  html:\n    css: styles.css\n    embed-resources: TRUE\n    code-fold: false\n    page-layout: full\n    fig_caption: yes\n    toc: false\n---\n\n\n\n\n\n<div id=\"key-findings\">\n## Key Finding 1\n<div data-aos=\"fade-up\">\nTBD\n</div>\n\n## Key Finding 2\n<div data-aos=\"zoom-in\">\nTBD\n</div>\n\n## Key Finding 3\n<div data-aos=\"zoom-in\">\nTBD\n</div>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "markdown": "---\ntitle: 'Key Findings'\nformat:\n  html:\n    css: styles.css\n    embed-resources: true\n    code-fold: false\n    page-layout: full\n    fig_caption: yes\n    toc: false\n---\n\n\n\n\n\n<div class=\"kf-white\" data-aos=\"fade-up\">\n## Key Finding 1\nTBD\n</div>\n\n<div class=\"kf-blue\" data-aos=\"zoom-in\">\n## Key Finding 2\nTBD\n</div>\n\n<div class=\"kf-white\" data-aos=\"zoom-in\">\n## Key Finding 3\nTBD\n</div>\n\n\n\n\n\n\n\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

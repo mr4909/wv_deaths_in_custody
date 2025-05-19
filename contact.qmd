@@ -10,14 +10,20 @@ format:
     toc: false
 ---
 
-<div id="page-banner">
-  <h1 class="page-title">Contact</h1>
-</div>
+::: {#page-banner}
+<h1 class="page-title">
+
+Contact
+
+</h1>
+:::
+
 <br>
 
+::: narrow-page
 If you'd like to connect or learn more about my work, feel free to reach out.
 
-- **Email:** [marialexandriraroberts@gmail.com](mailto:marialexandriraroberts@gmail.com)
-- **GitHub:** [https://github.com/mr4909](https://github.com/mr4909)
-- **LinkedIn:** [https://www.linkedin.com/in/marialexandriaroberts/](https://www.linkedin.com/in/marialexandriaroberts/)
-
+-   **Email:** [marialexandriraroberts\@gmail.com](mailto:marialexandriraroberts@gmail.com)
+-   **GitHub:** <https://github.com/mr4909/wv_deaths_in_custody>
+-   **LinkedIn:** <https://www.linkedin.com/in/marialexandriaroberts/>
+:::
