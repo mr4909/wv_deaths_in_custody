@@ -1,7 +1,7 @@
 project:
   type: website
   resources:
-    - data/wvcbp_deaths.csv
+    - data/wvcbp_deaths_in_custody.csv
     - fonts
 
 website:
