@@ -95,7 +95,7 @@
     "href": "about.html#purpose",
     "title": "About",
     "section": "Purpose",
-    "text": "Purpose\nIn West Virginia, people continue to die in jails and prisons with little public scrutiny and almost no official transparency. The state does not publish the names of those who die in custody. It does not release the facilities where deaths occur, the demographic details of those who die, or what caused their deaths. Public records are inconsistent, and in many cases, incomplete—especially for deaths in regional jails.\nFamilies are left without answers. The public is left without oversight. This project seeks to address that gap.\nIt provides the first publicly accessible, facility-level dataset of deaths in the custody of the West Virginia Division of Corrections and Rehabilitation (DCR). The goal is not only to document when and where people have died, but to place those deaths in context—by linking them to jail and prison conditions, population levels, and state records that are rarely disclosed or easily accessible."
+    "text": "Purpose\nIn West Virginia, people continue to die in jails and prisons with little public scrutiny and almost no official transparency. The state does not publish the names of those who die in custody. It does not release the facilities where deaths occur, the demographic details of those who die, or what caused their deaths. Public records are inconsistent, and in many cases, incomplete—especially for deaths in regional jails.\nFamilies are left without answers. The public is left without oversight. This project seeks to address that gap.\nIt provides the first publicly accessible, facility-level dataset of deaths in the custody of the West Virginia Division of Corrections and Rehabilitation (DCR). The goal is not only to document when and where people have died, but to place those deaths in context—by linking them to jail and prison conditions."
   },
   {
     "objectID": "about.html#why-it-matters",
@@ -109,7 +109,7 @@
     "href": "about.html#data-source",
     "title": "About",
     "section": "Data Source",
-    "text": "Data Source\nIn 2024, Sara Whitaker, a policy analyst at the West Virginia Center on Budget and Policy (WVCBP), submitted a public records request (FOIA) asking DCR to release case-level information on all deaths in custody since 2020.\n\nThe FOIA response included six tables embedded in a PDF, listing deaths by date, facility, demographic information, and manner of death.\n\nI manually extracted and cleaned those tables into a usable dataset.\nYou can view her original analysis here:\nAre Fewer People Dying in West Virginia Jails—or Is the State Simply Not Counting?"
+    "text": "Data Source\nIn 2024, Sara Whitaker, a senior policy analyst at the West Virginia Center on Budget and Policy (WVCBP), submitted a public records request (FOIA) asking DCR to release case-level information on all deaths in custody since 2020.\n\nThe FOIA response included six tables embedded in a PDF, listing deaths by date, facility, demographic information, and manner of death.\n\nI manually extracted and cleaned those tables into a usable dataset.\nYou can view her original analysis here:\nAre Fewer People Dying in West Virginia Jails—or Is the State Simply Not Counting?"
   },
   {
     "objectID": "about.html#this-project-builds-on-that-work",
@@ -123,14 +123,14 @@
     "href": "about.html#whats-included",
     "title": "About",
     "section": "What’s Included",
-    "text": "What’s Included\nThis site features:\n\nA downloadable, cleaned dataset of 284 deaths from 2020 to 2025\n\nInteractive charts exploring facility-level patterns\n\nFilters by age, gender, race, cause of death, and custody status\n\nA research log to document data issues, assumptions, and updates"
+    "text": "What’s Included\nThis site features:\n\nA downloadable, cleaned dataset of reported deaths from 2020 to 2025\n\nInteractive charts exploring facility-level patterns\n\nFilters by age, gender, race, cause of death, and custody status\n\nA research log to document data issues, assumptions, and updates"
   },
   {
     "objectID": "about.html#whats-next",
     "href": "about.html#whats-next",
     "title": "About",
     "section": "What’s Next",
-    "text": "What’s Next\nFuture updates will include:\n\nJail capacity data to examine overcrowding as a potential risk factor\n\nCross-referencing with UCLA’s Behind Bars dataset for comparison\n\nAdding incident narratives and lawsuits when available\n\nEstimating underreporting or inconsistent categorization of deaths"
+    "text": "What’s Next\nFuture updates will include:\n\nJail capacity data to examine overcrowding as a potential risk factor\n\nCross-referencing with UCLA’s Behind Bars dataset for comparison\n\nAdding incident narratives and lawsuits when available\n\nEstimating underreporting or inconsistent categorization of deaths\nRelative Rate Index (RRI) analysis to identify racial disparities in mortality"
   },
   {
     "objectID": "contact.html",

@@ -21,7 +21,7 @@ In West Virginia, people continue to die in jails and prisons with little public
 
 Families are left without answers. The public is left without oversight. This project seeks to address that gap.
 
-It provides the first publicly accessible, facility-level dataset of deaths in the custody of the **West Virginia Division of Corrections and Rehabilitation (DCR)**. The goal is not only to document when and where people have died, but to place those deaths in context—by linking them to jail and prison conditions, population levels, and state records that are rarely disclosed or easily accessible.
+It provides the first publicly accessible, facility-level dataset of deaths in the custody of the **West Virginia Division of Corrections and Rehabilitation (DCR)**. The goal is not only to document when and where people have died, but to place those deaths in context—by linking them to jail and prison conditions.
 
 ## Why It Matters
 
@@ -36,7 +36,7 @@ This makes public oversight nearly impossible.
 
 ## Data Source
 
-In 2024, **Sara Whitaker**, a policy analyst at the **West Virginia Center on Budget and Policy (WVCBP)**, submitted a public records request (FOIA) asking DCR to release case-level information on all deaths in custody since 2020.
+In 2024, **Sara Whitaker**, a senior policy analyst at the **West Virginia Center on Budget and Policy (WVCBP)**, submitted a public records request (FOIA) asking DCR to release case-level information on all deaths in custody since 2020.
 
 > The FOIA response included **six tables embedded in a PDF**, listing deaths by date, facility, demographic information, and manner of death.
 
@@ -60,7 +60,7 @@ This includes:
 
 This site features:
 
-- A downloadable, cleaned dataset of 284 deaths from 2020 to 2025  
+- A downloadable, cleaned dataset of reported deaths from 2020 to 2025  
 - Interactive charts exploring **facility-level patterns**  
 - Filters by **age, gender, race, cause of death, and custody status**  
 - A research log to document data issues, assumptions, and updates  
@@ -73,5 +73,6 @@ Future updates will include:
 - Cross-referencing with **UCLA’s Behind Bars** dataset for comparison  
 - Adding **incident narratives and lawsuits** when available  
 - Estimating **underreporting** or inconsistent categorization of deaths
+- **Relative Rate Index (RRI)** analysis to identify racial disparities in mortality
 
 </div>
