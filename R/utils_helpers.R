@@ -112,12 +112,11 @@ hc_custom_theme <- hc_theme(
     itemStyle = list(fontFamily = "Source Sans 3, sans-serif"),
     itemHoverStyle = list(fontWeight = "bold")
   ),
-  # colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
-  # colors = c("#1b4793", "#fac92c", "#f7b0be", "#2178ae", "#ef3c23", "#ed8e83", "#f15a42")
-  colors = c("#ff5738", "#edba3d", "#95b0dd", "#024555")
+  #colors = c("#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B")
+  colors = c("#1b4793", "#fac92c", "#f7b0be", "#2178ae", "#ef3c23", "#ed8e83", "#f15a42")
+  # colors = c("#ff5738", "#edba3d", "#95b0dd", "#024555")
+  # colors = c("#f66529")
 )
-
-
 
 # ------------------------
 # Reactable Theme
@@ -262,41 +261,51 @@ calculate_net_change <- function(df, start_year = 2020, end_year = 2024) {
 #'
 #' @description
 #' Creates a sentence summarizing the most common value for a specified variable 
-#' in a deaths-in-custody dataset between two years. The sentence is suitable 
-#' for use as an annotation above a graph.
+#' in a deaths-in-custody dataset between two years. Adjusts language based on 
+#' the variable (e.g., "were [group]" vs. "died from [cause]").
 #'
-#' @param df A data frame containing deaths data, with at least a `year` column 
-#'   and the specified variable.
-#' @param var A character string indicating the column name to summarize 
-#'   (e.g., "race", "age", "offender_status").
-#' @param start_year An integer specifying the start year for filtering (default is 2020).
-#' @param end_year An integer specifying the end year for filtering (default is 2024).
+#' @param df A data frame with at least `year` and the target variable.
+#' @param var Character string naming the variable to summarize.
+#' @param start_year Integer, first year to include in the summary (default = 2020).
+#' @param end_year Integer, last year to include in the summary (default = 2024).
 #'
-#' @return A character string with a formatted sentence, e.g., 
-#'   "From 2020 to 2024, most people who died in custody were classified as \"Pretrial\"."
-#'
-#' @examples
-#' generate_summary_sentence(df, "race")
-#' generate_summary_sentence(df_jail, "offender_status")
-#'
+#' @return A character summary sentence.
 #' @export
 generate_summary_sentence <- function(df, var, start_year = 2020, end_year = 2024) {
-  df_filtered <- df %>% filter(year >= start_year, year <= end_year)
+  df_filtered <- df %>%
+    filter(year >= start_year, year <= end_year)
+  
   most_common <- df_filtered %>%
     count(.data[[var]]) %>%
     arrange(desc(n)) %>%
     slice(1) %>%
     pull(1)
   
-  # Customize phrasing
-  label <- case_when(
-    var == "age" ~ paste0(most_common, " years old"),
-    var == "offender_status" ~ paste0('classified as "', most_common, '"'),
-    var == "race" ~ most_common,
-    TRUE ~ tolower(most_common)
-  )
+  # Clean label formatting
+  label <- str_trim(most_common)
   
-  paste0("From ", start_year, " to ", end_year, ", most people who died in custody were ", label, ".")
+  # Construct phrasing by variable
+  if (var == "age") {
+    phrase <- paste0(label, " years old")
+    verb <- "were"
+  } else if (var == "offender_status") {
+    phrase <- paste0('classified as"', label, '"')
+    verb <- "were"
+  } else if (var %in% c("manner_of_death", "cause_of_death")) {
+    phrase <- tolower(label)
+    phrase <- case_when(
+      phrase == "natural" ~ "natural causes",
+      phrase %in% c("pending", "unknown", "other/unknown", "other unknown") ~ paste("an", phrase, "cause"),
+      TRUE ~ phrase
+    )
+    verb <- "died from"
+  } else {
+    phrase <- label
+    verb <- "were"
+  }
+  
+  paste0("From ", start_year, " to ", end_year, ", most people who died in custody ", verb, " ", phrase, ".")
 }
+
 
 

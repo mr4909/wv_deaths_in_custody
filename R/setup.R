@@ -44,8 +44,8 @@ required_packages <- c(
 invisible(lapply(required_packages, library, character.only = TRUE))
 
 
-# colors = c("#d7790f", "#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B",
-#            "#1b4793", "#fc7255")
+colors = c("#d7790f", "#3F8BCA", "#00BDB2", "#F4B811", "#DE663E", "#FF912B",
+           "#1b4793", "#fc7255")
 
 # https://www.pinterest.com/pin/472878029644220127/
 colors = c("#1b4793", "#2178ae", "#fac92c",

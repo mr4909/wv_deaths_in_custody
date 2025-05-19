@@ -116,34 +116,41 @@
     "href": "analysis.html#facilities-with-the-most-deaths",
     "title": "Analysis Walkthrough",
     "section": "Facilities With the Most Deaths",
-    "text": "Facilities With the Most Deaths"
+    "text": "Facilities With the Most Deaths\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail."
   },
   {
     "objectID": "analysis.html#cause-and-manner-of-death",
     "href": "analysis.html#cause-and-manner-of-death",
     "title": "Analysis Walkthrough",
     "section": "Cause and Manner of Death",
-    "text": "Cause and Manner of Death\nFrom 2020 to 2024, most people who died in custody were heart disease.\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were natural."
+    "text": "Cause and Manner of Death\nFrom 2020 to 2024, most people who died in custody died from heart disease.\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody died from natural causes."
   },
   {
     "objectID": "analysis.html#demographics",
     "href": "analysis.html#demographics",
     "title": "Analysis Walkthrough",
     "section": "Demographics",
-    "text": "Demographics\n\nRaceGenderAge\n\n\nFrom 2020 to 2024, most people who died in custody were White.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were male.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were 60-69 years old."
+    "text": "Demographics\n\nRaceGenderAge\n\n\nFrom 2020 to 2024, most people who died in custody were White.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were Male.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were 60-69 years old."
   },
   {
     "objectID": "analysis.html#offender-status-jail",
     "href": "analysis.html#offender-status-jail",
     "title": "Analysis Walkthrough",
     "section": "Offender Status (Jail)",
-    "text": "Offender Status (Jail)\n\n\nFrom 2020 to 2024, most people who died in custody were classified as \"Convicted\"."
+    "text": "Offender Status (Jail)\nFrom 2020 to 2024, most people who died in custody were classified as”PTF Pretrial Felon”."
   },
   {
     "objectID": "analysis.html#offender-status-prison",
     "href": "analysis.html#offender-status-prison",
     "title": "Analysis Walkthrough",
     "section": "Offender Status (Prison)",
-    "text": "Offender Status (Prison)\n\n\nFrom 2020 to 2024, most people who died in custody were classified as \"Convicted\"."
+    "text": "Offender Status (Prison)\nFrom 2020 to 2024, most people who died in custody were classified as”Convicted”."
+  },
+  {
+    "objectID": "key_findings.html",
+    "href": "key_findings.html",
+    "title": "Key Findings",
+    "section": "",
+    "text": "TBD"
   }
 ]
