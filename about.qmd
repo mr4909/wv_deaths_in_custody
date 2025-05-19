@@ -17,11 +17,11 @@ format:
 
 ## Purpose
 
-When someone dies in a jail or prison, their loved ones are often left without answers. The public, too, is left in the dark—unable to understand where and why these deaths happen, or what conditions may have contributed to them. In West Virginia, meaningful transparency around deaths in custody is rare. The state does not publish names, demographic details, causes of death, or the facilities where people died. Many deaths—particularly in jails—are not reflected in public reporting at all.
+In West Virginia, people continue to die in jails and prisons with little public scrutiny and almost no official transparency. The state does not publish the names of those who die in custody. It does not release the facilities where deaths occur, the demographic details of those who die, or what caused their deaths. Public records are inconsistent, and in many cases, incomplete—especially for deaths in regional jails.
 
-This project exists to help fill that gap.
+Families are left without answers. The public is left without oversight. This project seeks to address that gap.
 
-It provides the first publicly accessible, facility-level dataset of deaths in **West Virginia’s Division of Corrections and Rehabilitation (DCR)** custody. It seeks to document when and where people have died, and to offer context around those deaths by linking them to facility characteristics and other public data.
+It provides the first publicly accessible, facility-level dataset of deaths in the custody of the **West Virginia Division of Corrections and Rehabilitation (DCR)**. The goal is not only to document when and where people have died, but to place those deaths in context—by linking them to jail and prison conditions, population levels, and state records that are rarely disclosed or easily accessible.
 
 ## Why It Matters
 
