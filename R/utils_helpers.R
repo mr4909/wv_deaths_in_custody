@@ -174,11 +174,14 @@ plot_deaths_by_var <- function(df, var_name) {
   df |>
     count(!!var_sym, sort = TRUE) |>
     mutate(!!var_sym := fct_reorder(!!var_sym, n)) |>
-    hchart("column", hcaes(x = !!var_sym, y = n), name = paste("Deaths:", label_clean)) |>
+    hchart("column", hcaes(x = !!var_sym, y = n)) |>
     hc_title(text = paste("Deaths by", label_clean)) |>
     hc_xAxis(title = list(text = label_clean)) |>
     hc_yAxis(title = list(text = "Number of Deaths"), min = 0) |>
-    hc_tooltip(enabled = TRUE) |>
+    hc_tooltip(
+      useHTML = TRUE,
+      pointFormat = paste0("<b>Deaths:</b> {point.y}")
+    ) |>
     hc_exporting(enabled = TRUE) |> 
     hc_add_theme(hc_custom_theme)
 }
@@ -198,7 +201,10 @@ plot_deaths_by_year <- function(df) {
     hc_title(text = "Deaths Over Time (All Facilities)") |>
     hc_xAxis(title = list(text = "Year")) |>
     hc_yAxis(title = list(text = "Number of Deaths"), min = 0) |>
-    hc_tooltip(enabled = TRUE) |>
+    hc_tooltip(
+      useHTML = TRUE,
+      pointFormat = paste0("<b>Deaths:</b> {point.y}")
+    ) |>
     hc_exporting(enabled = TRUE) |> 
     hc_add_theme(hc_custom_theme)
 }
@@ -225,7 +231,10 @@ plot_facility_trends <- function(df, min_total = 5) {
     hc_title(text = "Deaths Over Time by Facility") |>
     hc_xAxis(title = list(text = "Year")) |>
     hc_yAxis(title = list(text = "Number of Deaths"), min = 0) |>
-    hc_tooltip(enabled = TRUE) |>
+    hc_tooltip(
+      useHTML = TRUE,
+      pointFormat = paste0("<b>Deaths:</b> {point.y}")
+    ) |>
     hc_exporting(enabled = TRUE) |> 
     hc_add_theme(hc_custom_theme)
 }
@@ -257,39 +266,41 @@ calculate_net_change <- function(df, start_year = 2020, end_year = 2024) {
 # Summary Sentences
 # ------------------------
 
-#' @title Generate Summary Sentence for Most Common Group
+#' @title Generate Summary Sentence for Most Common Group with Percentage
 #'
 #' @description
-#' Creates a sentence summarizing the most common value for a specified variable 
-#' in a deaths-in-custody dataset between two years. Adjusts language based on 
-#' the variable (e.g., "were [group]" vs. "died from [cause]").
+#' Summarizes the most common value of a given variable in a deaths-in-custody dataset 
+#' between two years, including the share of total deaths.
 #'
-#' @param df A data frame with at least `year` and the target variable.
-#' @param var Character string naming the variable to summarize.
-#' @param start_year Integer, first year to include in the summary (default = 2020).
-#' @param end_year Integer, last year to include in the summary (default = 2024).
+#' @param df A data frame with a `year` column and the target variable.
+#' @param var Variable name to summarize (e.g., "race", "offender_status").
+#' @param start_year First year to include in the analysis (default = 2020).
+#' @param end_year Last year to include in the analysis (default = 2024).
 #'
-#' @return A character summary sentence.
+#' @return A character sentence describing the most common category and percentage.
 #' @export
 generate_summary_sentence <- function(df, var, start_year = 2020, end_year = 2024) {
   df_filtered <- df %>%
     filter(year >= start_year, year <= end_year)
   
-  most_common <- df_filtered %>%
+  counts <- df_filtered %>%
     count(.data[[var]]) %>%
-    arrange(desc(n)) %>%
-    slice(1) %>%
-    pull(1)
+    arrange(desc(n))
+  
+  top_value <- counts[[var]][1]
+  top_count <- counts$n[1]
+  total_count <- sum(counts$n)
+  pct <- round(100 * top_count / total_count)
   
   # Clean label formatting
-  label <- str_trim(most_common)
+  label <- str_trim(top_value)
   
-  # Construct phrasing by variable
+  # Construct phrasing
   if (var == "age") {
     phrase <- paste0(label, " years old")
     verb <- "were"
   } else if (var == "offender_status") {
-    phrase <- paste0('classified as"', label, '"')
+    phrase <- paste0('classified as "', label, '"')
     verb <- "were"
   } else if (var %in% c("manner_of_death", "cause_of_death")) {
     phrase <- tolower(label)
@@ -304,8 +315,39 @@ generate_summary_sentence <- function(df, var, start_year = 2020, end_year = 202
     verb <- "were"
   }
   
-  paste0("From ", start_year, " to ", end_year, ", most people who died in custody ", verb, " ", phrase, ".")
+  paste0("From ", start_year, " to ", end_year, 
+         ", most people who died in custody ", verb, " ", phrase, 
+         " (", pct, "% of deaths).")
 }
 
+#' @title Add breakdown for Other/Unknown and All Other Illnesses
+#' @description Prints a sentence summarizing counts and percentages for
+#' "Other/unknown" and "All other illnesses" causes of death.
+#'
+#' @param df A data frame with a column called `cause_of_death`.
+#' @return A sentence summarizing deaths by vague/unspecified causes.
+#' @export
+generate_additional_cod_note <- function(df) {
+  total <- nrow(df)
+  
+  count_other <- df %>%
+    filter(str_to_lower(cause_of_death) %in% c("other/unknown", "other unknown")) %>%
+    nrow()
+  
+  count_illness <- df %>%
+    filter(str_to_lower(cause_of_death) == "all other illnesses") %>%
+    nrow()
+  
+  pct_other <- round(100 * count_other / total)
+  pct_illness <- round(100 * count_illness / total)
+  
+  sentence <- paste0(
+    "However, ", count_other, " deaths (", pct_other, "%) were classified as ",
+    "\"Other/unknown\" and ", count_illness, " deaths (", pct_illness, "%) as ",
+    "\"All other illnesses.\""
+  )
+  
+  sentence
+}
 
 

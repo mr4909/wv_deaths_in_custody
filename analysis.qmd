@@ -64,11 +64,31 @@ df_wo_2025 <- df |> filter(year < 2025)
 
 ## Annual Trends
 
+The number of deaths each year provides a baseline view of overall mortality in West Virginia custody. Identifying spikes or declines helps flag potential changes in facility conditions, medical oversight, or reporting practices. 
+
+```{r, asis=TRUE}
+# Deaths per year for display
+annual_counts <- df |>
+  count(year) |>
+  arrange(year)
+
+# Get values for 2024 and Jan–Mar 2025
+deaths_2024 <- annual_counts |> filter(year == 2024) |> pull(n)
+deaths_2025_ytd <- df |> filter(year == 2025, lubridate::month(date_of_death) <= 3) |> nrow()
+```
+
+While deaths have been gradually declining in recent years, there were still `r deaths_2024` deaths in 2024. In the first three months of 2025 alone, there have already been `r deaths_2025_ytd` deaths reported.
+
 ```{r}
 plot_deaths_by_year(df_wo_2025)
 ```
 
 ## Demographics
+
+Understanding who is dying in custody is critical. Demographic breakdowns help show whether certain groups—by race, gender, or age—are disproportionately represented in deaths.
+
+A disparities analysis is in progress. For example, assessing whether certain racial groups experience higher death rates relative to their representation in the incarcerated population. This includes calculating relative rate indices using population baselines from facility-level and systemwide data where available.
+
 ::: {.panel-tabset .nav-pills}
 
 ### Race
@@ -91,7 +111,29 @@ plot_deaths_by_var(df_wo_2025, "gender") |>
 
 ### Age
 
+```{r}
+# Filter valid age data
+age_summary <- df_wo_2025 |>
+  filter(!is.na(age_at_time_of_death))
+
+# Counts
+over_55 <- age_summary |> filter(age_at_time_of_death >= 55) |> nrow()
+under_55 <- age_summary |> filter(age_at_time_of_death < 55) |> nrow()
+total_age_count <- nrow(age_summary)
+
+# Percentages
+pct_over_55 <- round(100 * over_55 / total_age_count, 1)
+pct_under_55 <- round(100 * under_55 / total_age_count, 1)
+
+# Average age
+avg_age <- round(mean(age_summary$age_at_time_of_death), 1)
+```
+
 `r generate_summary_sentence(df_wo_2025, "age")`
+
+`r under_55` people who died in custody from 2020 to 2024 were under the age of 55 — that’s `r pct_under_55`% of all deaths. `r over_55` people (or `r pct_over_55`%) were 55 or older.
+
+The average age at time of death was `r avg_age` years old. For comparison, the average life expectancy in the U.S. is about 76 years.
 
 ```{r}
 plot_deaths_by_var(df_wo_2025, "age") |>
@@ -100,6 +142,8 @@ plot_deaths_by_var(df_wo_2025, "age") |>
 :::
 
 ## Offender Status (Jail)
+
+Many people who die in jail custody are held pretrial, meaning they have not yet been convicted of a crime. This breakdown focuses specifically on deaths in jail facilities.
 
 ```{r}
 df_jail <- df_wo_2025 |> filter(type == "Jail")
@@ -113,6 +157,8 @@ plot_deaths_by_var(df_jail, "offender_status")
 
 ## Offender Status (Prison)
 
+This chart examines deaths in prison settings, where most individuals are serving post-conviction sentences. Comparing jail and prison trends can highlight differences in medical access, length of stay, and population health.
+
 ```{r, asis=TRUE}
 df_prison <- df_wo_2025 |> filter(type == "Prison")
 ```
@@ -123,14 +169,20 @@ df_prison <- df_wo_2025 |> filter(type == "Prison")
 plot_deaths_by_var(df_prison, "offender_status") 
 ```
 
+## Cause of Death
 
-## Cause and Manner of Death
+Cause of death fields are inconsistently reported but offer valuable insight into medical and systemic issues inside facilities. The leading cause may reflect underlying health conditions or facility-level healthcare failures.
 
 `r generate_summary_sentence(df_wo_2025, "cause_of_death")`
+`r generate_additional_cod_note(df_wo_2025)`
 
 ```{r}
 plot_deaths_by_var(df_wo_2025, "cause_of_death")
 ```
+
+## Manner of Death 
+
+Manner of death—how the death occurred—helps identify systemic failures such as suicide risk, overdose management, or neglect. This chart captures the official classification reported in each case.
 
 `r generate_summary_sentence(df_wo_2025, "manner_of_death")`
 
@@ -139,6 +191,10 @@ plot_deaths_by_var(df_wo_2025, "manner_of_death")
 ```
 
 ## Facilities With the Most Deaths
+
+Some facilities account for a disproportionately high number of deaths.
+
+Currently investigating whether these patterns may be related to conditions such as overcrowding or staffing shortages. As part of the next phase of this analysis, I will calculate mortality rates, using population data.
 
 ```{r}
 top_facilities <- df_wo_2025 |>
@@ -158,6 +214,7 @@ sentence <- paste0(
   top_jails$facility_name[1], " and ", top_jails$facility_name[2], "."
 )
 ```
+
 `r sentence`
 
 ```{r}

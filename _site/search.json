@@ -95,7 +95,7 @@
     "href": "analysis.html#annual-trends",
     "title": "Analysis Walkthrough",
     "section": "Annual Trends",
-    "text": "Annual Trends"
+    "text": "Annual Trends\nThe number of deaths each year provides a baseline view of overall mortality in West Virginia custody. Identifying spikes or declines helps flag potential changes in facility conditions, medical oversight, or reporting practices.\nWhile deaths have been gradually declining in recent years, there were still 44 deaths in 2024. In the first three months of 2025 alone, there have already been 10 deaths reported."
   },
   {
     "objectID": "analysis.html#offender-status",
@@ -116,35 +116,35 @@
     "href": "analysis.html#facilities-with-the-most-deaths",
     "title": "Analysis Walkthrough",
     "section": "Facilities With the Most Deaths",
-    "text": "Facilities With the Most Deaths\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail."
+    "text": "Facilities With the Most Deaths\nSome facilities account for a disproportionately high number of deaths.\nCurrently investigating whether these patterns may be related to conditions such as overcrowding or staffing shortages. As part of the next phase of this analysis, I will calculate mortality rates, using population data.\nFrom 2020 to 2024, the prisons with the most deaths were Mount Olive Correctional Complex and Stevens Correctional Center. The jails with the most deaths were Southern Regional Jail and North Central Regional Jail."
   },
   {
     "objectID": "analysis.html#cause-and-manner-of-death",
     "href": "analysis.html#cause-and-manner-of-death",
     "title": "Analysis Walkthrough",
     "section": "Cause and Manner of Death",
-    "text": "Cause and Manner of Death\nFrom 2020 to 2024, most people who died in custody died from heart disease.\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody died from natural causes."
+    "text": "Cause and Manner of Death\nFrom 2020 to 2024, most people who died in custody died from heart disease (29% of deaths). However, 41 deaths (15%) were classified as “Other/unknown” and 52 deaths (19%) as “All other illnesses.”\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody died from natural causes (65% of deaths)."
   },
   {
     "objectID": "analysis.html#demographics",
     "href": "analysis.html#demographics",
     "title": "Analysis Walkthrough",
     "section": "Demographics",
-    "text": "Demographics\n\nRaceGenderAge\n\n\nFrom 2020 to 2024, most people who died in custody were White.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were Male.\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were 60-69 years old."
+    "text": "Demographics\nUnderstanding who is dying in custody is critical. Demographic breakdowns help show whether certain groups—by race, gender, or age—are disproportionately represented in deaths.\nA disparities analysis is in progress. For example, assessing whether certain racial groups experience higher death rates relative to their representation in the incarcerated population. This includes calculating relative rate indices using population baselines from facility-level and systemwide data where available.\n\nRaceGenderAge\n\n\nFrom 2020 to 2024, most people who died in custody were White (92% of deaths).\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were Male (94% of deaths).\n\n\n\n\n\n\n\n\nFrom 2020 to 2024, most people who died in custody were 60-69 years old (22% of deaths).\n115 people who died in custody from 2020 to 2024 were under the age of 55 — that’s 42% of all deaths.\n159 people (or 58%) were 55 or older.\nThe average age at time of death was 58.6 years old. For comparison, the average life expectancy in the U.S. is about 76 years."
   },
   {
     "objectID": "analysis.html#offender-status-jail",
     "href": "analysis.html#offender-status-jail",
     "title": "Analysis Walkthrough",
     "section": "Offender Status (Jail)",
-    "text": "Offender Status (Jail)\nFrom 2020 to 2024, most people who died in custody were classified as”PTF Pretrial Felon”."
+    "text": "Offender Status (Jail)\nMany people who die in jail custody are held pretrial, meaning they have not yet been convicted of a crime. This breakdown focuses specifically on deaths in jail facilities.\nFrom 2020 to 2024, most people who died in custody were classified as “PTF Pretrial Felon” (53% of deaths)."
   },
   {
     "objectID": "analysis.html#offender-status-prison",
     "href": "analysis.html#offender-status-prison",
     "title": "Analysis Walkthrough",
     "section": "Offender Status (Prison)",
-    "text": "Offender Status (Prison)\nFrom 2020 to 2024, most people who died in custody were classified as”Convicted”."
+    "text": "Offender Status (Prison)\nThis chart examines deaths in prison settings, where most individuals are serving post-conviction sentences. Comparing jail and prison trends can highlight differences in medical access, length of stay, and population health.\nFrom 2020 to 2024, most people who died in custody were classified as “Convicted” (99% of deaths)."
   },
   {
     "objectID": "key_findings.html",
@@ -152,5 +152,19 @@
     "title": "Key Findings",
     "section": "",
     "text": "TBD"
+  },
+  {
+    "objectID": "analysis.html#cause-of-death",
+    "href": "analysis.html#cause-of-death",
+    "title": "Analysis Walkthrough",
+    "section": "Cause of Death",
+    "text": "Cause of Death\nCause of death fields are inconsistently reported but offer valuable insight into medical and systemic issues inside facilities. The leading cause may reflect underlying health conditions or facility-level healthcare failures.\nFrom 2020 to 2024, most people who died in custody died from heart disease (29% of deaths). However, 41 deaths (15%) were classified as “Other/unknown” and 52 deaths (19%) as “All other illnesses.”"
+  },
+  {
+    "objectID": "analysis.html#manner-of-death",
+    "href": "analysis.html#manner-of-death",
+    "title": "Analysis Walkthrough",
+    "section": "Manner of Death",
+    "text": "Manner of Death\nManner of death—how the death occurred—helps identify systemic failures such as suicide risk, overdose management, or neglect. This chart captures the official classification reported in each case.\nFrom 2020 to 2024, most people who died in custody died from natural causes (65% of deaths)."
   }
 ]
