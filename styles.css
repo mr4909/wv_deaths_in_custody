@@ -179,6 +179,26 @@ main.content {
   padding-top: 0 !important;
 }
 
+/* ---------- KEY FINDINGS PAGE ---------- */
+
+#key-findings {
+  background-color: #1b4793; /* light blue background */
+  padding: 2rem;
+  border-radius: 8px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff; 
+}
 
 /* ---------- NAVIGATION BAR ---------- */
 /* Style for navigation menu */

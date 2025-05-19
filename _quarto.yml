@@ -30,6 +30,9 @@ format:
     css: styles.css
     toc: true
     toc-location: left
+    includes:
+      in-header: includes/aos-header.html
+      after-body: includes/aos-footer.html
 
 execute:
   freeze: auto

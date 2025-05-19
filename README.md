@@ -48,7 +48,7 @@ The dataset available for download includes:
 - Legal status at time of death (e.g., pretrial, sentenced)
 
 Download directly here:  
-[**Download CSV**](data/wvcbp_deaths.csv)
+[**Download CSV**](data/wvcbp_deaths_in_custody.csv)
 
 ## Sources and FOIA References
 
